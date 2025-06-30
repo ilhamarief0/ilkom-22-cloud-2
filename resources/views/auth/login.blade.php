@@ -1,68 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<!--begin::Head-->
+	<!--begin::Head (bagian kepala HTML, berisi meta, link CSS, dll.)-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
 		<title>Login Page 2 | Keenthemes</title>
+        <!-- Token CSRF untuk keamanan -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
-		<!--begin::Fonts-->
+
+		<!--begin::Fonts (menggunakan font Poppins dari Google Fonts)-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
-		<!--begin::Page Custom Styles(used by this page)-->
+
+		<!--begin::Page Custom Styles (khusus untuk halaman login ini)-->
 		<link href="{{ asset('assets/backend/css/pages/login/classic/login-2.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Page Custom Styles-->
-		<!--begin::Global Theme Styles(used by all pages)-->
+
+		<!--begin::Global Theme Styles (untuk seluruh halaman)-->
 		<link href="{{ asset('assets/backend/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/backend/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/backend/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
-		<!--begin::Layout Themes(used by all pages)-->
+
+		<!--begin::Layout Themes (tema untuk header, brand, aside)-->
 		<link href="{{ asset('assets/backend/css/themes/layout/header/base/light.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/backend/css/themes/layout/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/backend/css/themes/layout/brand/dark.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/backend/css/themes/layout/aside/dark.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
+
+		<!-- Favicon -->
 		<link rel="shortcut icon" href="{{ asset('assets/backend/media/logos/favicon.ico') }}" />
 	</head>
 	<!--end::Head-->
+
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
-		<!--begin::Main-->
+		
+		<!--begin::Main (container utama login)-->
 		<div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
 
 		<div class="d-flex flex-column flex-root">
-			<!--begin::Login-->
+			<!--begin::Login (container login)-->
 			<div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
-				<!--begin::Aside-->
+
+				<!--begin::Aside (panel kiri login)-->
 				<div class="login-aside order-2 order-lg-1 d-flex flex-column-fluid flex-lg-row-auto bgi-size-cover bgi-no-repeat p-7 p-lg-10">
+
 					<!--begin: Aside Container-->
 					<div class="d-flex flex-row-fluid flex-column justify-content-between">
-						<!--begin::Aside body-->
+
+						<!--begin::Aside body (konten utama aside)-->
 						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
+							
+							<!-- Logo -->
 							<a href="#" class="mb-15 text-center">
 								<img src="{{ asset('assets/backend/media/logos/logo-letter-1.png') }}" class="max-h-75px" alt="" />
 							</a>
-							<!--begin::Signin-->
+
+							<!--begin::Signin (form login)-->
 							<div class="login-form login-signin">
 								<div class="text-center mb-10 mb-lg-20">
 									<h2 class="font-weight-bold">Sign In</h2>
 									<p class="text-muted font-weight-bold">Enter your username and password</p>
 								</div>
+
+                                <!-- Pesan logout -->
                                 @if(Session::has('logout_message'))
                                 <div id="logout-alert" class="alert alert-success mb-5">
                                     {{ Session::get('logout_message') }}
                                 </div>
                                 @endif
+
+                                <!-- Pesan reset password -->
                                 @if(Session::has('reset_message'))
                                 <div id="logout-alert" class="alert alert-success mb-5">
                                     {{ Session::get('reset_message') }}
                                 </div>
                                 @endif
-								<!--begin::Form-->
+
+								<!--begin::Form (form login POST)-->
 								<form class="form" novalidate="novalidate" id="kt_login_signin_form" action="{{route('login.post')}}" method="POST">
                                     @csrf
 									<div class="form-group py-3 m-0">
@@ -90,17 +109,21 @@
 								<!--end::Form-->
 							</div>
 							<!--end::Signin-->
-							<!--begin::Signup-->
+
+							<!--begin::Signup (form pendaftaran)-->
 							<div class="login-form login-signup">
 								<div class="text-center mb-10 mb-lg-20">
 									<h3 class="">Sign Up</h3>
 									<p class="text-muted font-weight-bold">Enter your details to create your account</p>
 								</div>
-								 @if(session('message'))
+
+								<!-- Pesan sukses signup -->
+								@if(session('message'))
             					<div class="alert alert-success">
                 				{{session('message')}}
             					</div>
             					@endif
+
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_login_signup_form"/>
 									@csrf
@@ -132,12 +155,14 @@
 								<!--end::Form-->
 							</div>
 							<!--end::Signup-->
-							<!--begin::Forgot-->
+
+							<!--begin::Forgot (form lupa password)-->
 							<div class="login-form login-forgot">
 								<div class="text-center mb-10 mb-lg-20">
 									<h3 class="">Forgotten Password ?</h3>
 									<p class="text-muted font-weight-bold">Enter your email to reset your password</p>
 								</div>
+
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_login_forgot_form">
 									<div class="form-group py-3 border-bottom mb-10">
@@ -153,7 +178,8 @@
 							<!--end::Forgot-->
 						</div>
 						<!--end::Aside body-->
-						<!--begin: Aside footer for desktop-->
+
+						<!--begin: Aside footer untuk versi desktop-->
 						<div class="d-flex flex-column-auto justify-content-between mt-15">
 							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© Radios Electronic Store</div>
 							<div class="d-flex order-1 order-sm-2 my-2">
@@ -162,32 +188,38 @@
 								<a href="#" class="text-muted text-hover-primary ml-4">Contact</a>
 							</div>
 						</div>
-						<!--end: Aside footer for desktop-->
+						<!--end: Aside footer untuk versi desktop-->
 					</div>
 					<!--end: Aside Container-->
 				</div>
-				<!--begin::Aside-->
-				<!--begin::Content-->
+				<!--end::Aside-->
 
+				<!--begin::Content (bagian isi utama, bisa dikembangkan)-->
 				<!--end::Content-->
 			</div>
 			<!--end::Login-->
 		</div>
 	</div>
-		<!--end::Main-->
-		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
-		<!--begin::Global Config(global config for global JS scripts)-->
-		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
-		<!--end::Global Config-->
-		<!--begin::Global Theme Bundle(used by all pages)-->
-		<script src="{{ asset('assets/backend/plugins/global/plugins.bundle.js') }}"></script>
-		<script src="{{ asset('assets/backend/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
-		<script src="{{ asset('assets/backend/js/scripts.bundle.js') }}"></script>
-		<script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
-		<!--end::Global Theme Bundle-->
-		<!--begin::Page Scripts(used by this page)-->
-		<script src="{{ asset('assets/backend/js/pages/custom/login/login-general.js') }}"></script>
-		<!--end::Page Scripts-->
+	<!--end::Main-->
+
+	<!--begin::Script konfigurasi Metronic-->
+	<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+
+	<!--begin::Global Config untuk JS-->
+	<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": {...}, "font-family": "Poppins" };</script>
+	<!--end::Global Config-->
+
+	<!--begin::Global Theme Bundle-->
+	<script src="{{ asset('assets/backend/plugins/global/plugins.bundle.js') }}"></script>
+	<script src="{{ asset('assets/backend/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
+	<script src="{{ asset('assets/backend/js/scripts.bundle.js') }}"></script>
+	<script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
+	<!--end::Global Theme Bundle-->
+
+	<!--begin::Page Scripts (khusus halaman login)-->
+	<script src="{{ asset('assets/backend/js/pages/custom/login/login-general.js') }}"></script>
+	<!--end::Page Scripts-->
+
 	</body>
 	<!--end::Body-->
 </html>
