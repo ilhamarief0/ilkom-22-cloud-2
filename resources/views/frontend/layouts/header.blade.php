@@ -1,5 +1,7 @@
 <!-- header start -->
 <header class="header header__style-one">
+
+    <!-- CSS internal untuk elemen header -->
     <style>
         /* Animasi hover pada ikon */
         .header__icons .icon:hover img {
@@ -21,59 +23,69 @@
             transition: border 0.3s ease;
         }
 
+        /* Warna border saat input pencarian aktif */
         .header__search-box input:focus {
             border: 1px solid #007bff;
             outline: none;
         }
 
-        /* Bayangan pada kartu kategori */
+        /* Bayangan pada daftar kategori */
         .header__cat ul.category li {
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
             transition: box-shadow 0.3s ease;
         }
 
+        /* Efek hover pada kategori */
         .header__cat ul.category li:hover {
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Spasi antar elemen */
+        /* Spasi di tengah header */
         .header__middle {
             padding: 15px 0;
         }
 
+        /* Margin antar ikon header */
         .header__icons .icon {
             margin-right: 15px;
         }
 
-        /* Garis pemisah pada bagian atas */
+        /* Garis pembatas bagian atas header */
         .header__top-info-wrap {
             border-bottom: 1px solid #ddd;
             margin-bottom: 10px;
         }
 
-        /* Font tebal pada elemen penting */
+        /* Bold untuk elemen penting */
         .header__top-info ul li span {
             font-weight: bold;
         }
 
+        /* Italic pada bahasa */
         .header__lang ul li a {
             font-style: italic;
         }
     </style>
-    
+
+    <!-- Baris paling atas: info toko dan sosial media -->
     <div class="header__top-info-wrap d-none d-lg-block">
         <div class="container">
             <div class="header__top-info ul_li_between mt-none-10">
                 <ul class="ul_li mt-10">
+                    <!-- Info lokasi toko -->
                     <li><i class="far fa-map-marker-alt" aria-hidden="true"></i><span>Lokasi Toko</span></li>
+                    <!-- Info pelacakan pesanan -->
                     <li><i class="far fa-truck" aria-hidden="true"></i><span>Melacak Pesanan Anda</span></li>
+                    <!-- Info kontak -->
                     <li><i class="fas fa-phone" aria-hidden="true"></i><span>Hubungi Kami Untuk Pertanyaan</span></li>
+                    <!-- Sambutan toko -->
                     <li>
                         <i class="fas fa-heart" aria-hidden="true"></i>
                         <span>Selamat datang di Radios. Kami menyediakan barang elektronik terbaik</span>
                     </li>
                 </ul>
+                <!-- Tanggal dan ikon sosial media -->
                 <div class="header__top-right ul_li mt-10">
                     <div class="date" aria-label="Tanggal">
                         <i class="fal fa-calendar-alt" aria-hidden="true"></i> Friday, July 27, 2020
@@ -89,13 +101,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Bagian tengah header: logo, pencarian, bahasa, ikon -->
     <div class="container">
         <div class="header__middle ul_li_between justify-content-xs-center">
+
+            <!-- Logo toko -->
             <div class="header__logo">
                 <a href="index.html" aria-label="Homepage">
                     <img src="assets/img/logo/logo.svg" alt="Logo Radios">
                 </a>
             </div>
+
+            <!-- Form pencarian -->
             <form class="header__search-box" action="#" aria-label="Form Pencarian">
                 <div class="select-box">
                     <label for="category" class="sr-only">Kategori</label>
@@ -118,6 +136,8 @@
                     <i class="far fa-search" aria-hidden="true"></i>
                 </button>
             </form>
+
+            <!-- Pilihan bahasa dan mata uang -->
             <div class="header__lang ul_li">
                 <div class="header__language mr-15">
                     <ul>
@@ -142,6 +162,8 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Ikon user, wishlist, dan keranjang -->
             <div class="header__icons ul_li">
                 <div class="icon">
                     <a href="#!" aria-label="Akun Pengguna"><img src="assets/img/icon/user.svg" alt="Ikon Pengguna"></a>
@@ -161,9 +183,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Navigasi kategori dan tombol login/signup -->
     <div class="header__cat-wrap" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
         <div class="container">
             <div class="header__wrap ul_li_between">
+
+                <!-- Daftar kategori dengan ikon -->
                 <div class="header__cat ul_li">
                     <div class="hamburger_menu">
                         <a href="javascript:void(0);" class="active" aria-label="Kategori">
@@ -181,6 +207,8 @@
                         <li><a href="#!"><span><img src="assets/img/icon/hc_06.svg" alt="Ikon Gaming"></span>Gaming & Fun</a></li>
                     </ul>
                 </div>
+
+                <!-- Tombol login atau daftar -->
                 <div class="login-sign-btn">
                     <a class="thm-btn" href="{{ route('login') }}">
                         <span class="btn-wrap">
@@ -189,6 +217,7 @@
                         </span>
                     </a>
                 </div>
+
             </div>
         </div>
     </div>
