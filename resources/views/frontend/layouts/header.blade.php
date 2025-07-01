@@ -74,19 +74,29 @@
     <div class="header__top-info-wrap d-none d-lg-block">
         <div class="container">
             <div class="header__top-info ul_li_between mt-none-10">
-                <ul class="ul_li mt-10">
-                    <!-- Info lokasi toko -->
-                    <li><i class="far fa-map-marker-alt" aria-hidden="true"></i><span>Lokasi Toko</span></li>
+              <ul class="ul_li mt-10" style="list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif; border-radius: 8px;">
+    <!-- Info lokasi toko -->
+                    <li style="padding: 10px; display: flex; align-items: center; background-color: #f9f9f9; cursor: pointer; transition: background-color 0.3s;">
+                        <i class="far fa-map-marker-alt" aria-hidden="true" style="color: #FF5733; font-size: 16px; margin-right: 10px;"></i>
+                        <span style="color: #333; font-size: 14px;">Lokasi Toko</span>
+                    </li>
                     <!-- Info pelacakan pesanan -->
-                    <li><i class="far fa-truck" aria-hidden="true"></i><span>Melacak Pesanan Anda</span></li>
+                    <li style="padding: 10px; display: flex; align-items: center; background-color: #fff; cursor: pointer; transition: background-color 0.3s;">
+                        <i class="far fa-truck" aria-hidden="true" style="color: #33B5E5; font-size: 16px; margin-right: 10px;"></i>
+                        <span style="color: #333; font-size: 14px;">Melacak Pesanan Anda</span>
+                    </li>
                     <!-- Info kontak -->
-                    <li><i class="fas fa-phone" aria-hidden="true"></i><span>Hubungi Kami Untuk Pertanyaan</span></li>
+                    <li style="padding: 10px; display: flex; align-items: center; background-color: #f9f9f9; cursor: pointer; transition: background-color 0.3s;">
+                        <i class="fas fa-phone" aria-hidden="true" style="color: #4CAF50; font-size: 16px; margin-right: 10px;"></i>
+                        <span style="color: #333; font-size: 14px;">Hubungi Kami Untuk Pertanyaan</span>
+                    </li>
                     <!-- Sambutan toko -->
-                    <li>
-                        <i class="fas fa-heart" aria-hidden="true"></i>
-                        <span>Selamat datang di Radios. Kami menyediakan barang elektronik terbaik</span>
+                    <li style="padding: 10px; display: flex; align-items: center; background-color: #fff; cursor: pointer; transition: background-color 0.3s;">
+                        <i class="fas fa-heart" aria-hidden="true" style="color: #E91E63; font-size: 16px; margin-right: 10px;"></i>
+                        <span style="color: #333; font-size: 14px;">Selamat datang di Radios. Kami menyediakan barang elektronik terbaik</span>
                     </li>
                 </ul>
+
                 <!-- Tanggal dan ikon sosial media -->
                 <div class="header__top-right ul_li mt-10">
                     <div class="date" aria-label="Tanggal">
