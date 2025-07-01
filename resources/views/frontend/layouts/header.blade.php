@@ -66,7 +66,9 @@
         .header__lang ul li a {
             font-style: italic;
         }
+
     </style>
+    
 
     <!-- Baris paling atas: info toko dan sosial media -->
     <div class="header__top-info-wrap d-none d-lg-block">
