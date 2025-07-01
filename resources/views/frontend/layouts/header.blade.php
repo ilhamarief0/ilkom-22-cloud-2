@@ -114,28 +114,38 @@
             </div>
 
             <!-- Form pencarian -->
-            <form class="header__search-box" action="#" aria-label="Form Pencarian">
-                <div class="select-box">
-                    <label for="category" class="sr-only">Kategori</label>
-                    <select id="category" name="category">
-                        <option value="">Semua Kategori</option>
-                        <option value="4">Koleksi Musim Panas</option>
-                        <option value="5">Sarapan & Produk Susu</option>
-                        <option value="6">Minuman & Minuman</option>
-                        <option value="7">Kotak Cokelat</option>
-                        <option value="8">Pojok Makanan Kering</option>
-                        <option value="9">Makanan Beku</option>
-                        <option value="10">Pojok Makanan Bayi</option>
-                        <option value="11">Susu & Jus</option>
-                        <option value="12">Organik & Makanan Ringan</option>
-                    </select>
-                </div>
-                <label for="search" class="sr-only">Cari Barang</label>
-                <input type="text" name="search" id="search" placeholder="Cari Barang" required>
-                <button type="submit" aria-label="Cari">
-                    <i class="far fa-search" aria-hidden="true"></i>
-                </button>
-            </form>
+           <form class="header__search-box" action="#" aria-label="Form Pencarian" style="display: flex; gap: 10px; align-items: center;">
+    <div class="select-box">
+        <label for="category" class="sr-only">Kategori</label>
+        <select id="category" name="category" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+            <option value="">Semua Kategori</option>
+            <option value="4">Koleksi Musim Panas</option>
+            <option value="5">Sarapan & Produk Susu</option>
+            <option value="6">Minuman & Minuman</option>
+            <option value="7">Kotak Cokelat</option>
+            <option value="8">Pojok Makanan Kering</option>
+            <option value="9">Makanan Beku</option>
+            <option value="10">Pojok Makanan Bayi</option>
+            <option value="11">Susu & Jus</option>
+            <option value="12">Organik & Makanan Ringan</option>
+        </select>
+    </div>
+    <label for="search" class="sr-only">Cari Barang</label>
+    <input 
+        type="text" 
+        name="search" 
+        id="search" 
+        placeholder="Cari barang, kategori, atau merek..." 
+        required 
+        style="flex: 1; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+    <button 
+        type="submit" 
+        aria-label="Cari" 
+        style="padding: 8px 12px; background-color:rgb(255, 145, 0); color: white; border: none; border-radius: 4px; cursor: pointer;">
+        <i class="far fa-search" aria-hidden="true"></i>
+    </button>
+</form>
+
 
             <!-- Pilihan bahasa dan mata uang -->
             <div class="header__lang ul_li">
