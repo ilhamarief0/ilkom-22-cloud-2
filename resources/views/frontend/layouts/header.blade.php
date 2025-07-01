@@ -98,18 +98,39 @@
                 </ul>
 
                 <!-- Tanggal dan ikon sosial media -->
-                <div class="header__top-right ul_li mt-10">
-                    <div class="date" aria-label="Tanggal">
-                        <i class="fal fa-calendar-alt" aria-hidden="true"></i> Friday, July 27, 2020
-                    </div>
-                    <div class="header__social ml-25">
-                        <a href="#!" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#!" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#!" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#!" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        <a href="#!" aria-label="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                    </div>
-                </div>
+               <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; color: #333; border-radius: 4px; width: 100%; max-width: 600px;">
+        <div style="font-size: 12px; display: flex; align-items: center;">
+            <i class="fal fa-calendar-alt" style="margin-right: 5px; color: #555;"></i> 
+            <span>Friday, July 27, 2020</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="#!" aria-label="Facebook" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+               onmouseover="this.style.color='#3b5998';this.style.transform='scale(1.1)';" 
+               onmouseout="this.style.color='#555';this.style.transform='none';">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#!" aria-label="Twitter" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+               onmouseover="this.style.color='#1da1f2';this.style.transform='scale(1.1)';" 
+               onmouseout="this.style.color='#555';this.style.transform='none';">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#!" aria-label="Instagram" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+               onmouseover="this.style.color='#d62976';this.style.transform='scale(1.1)';" 
+               onmouseout="this.style.color='#555';this.style.transform='none';">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#!" aria-label="YouTube" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+               onmouseover="this.style.color='#ff0000';this.style.transform='scale(1.1)';" 
+               onmouseout="this.style.color='#555';this.style.transform='none';">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#!" aria-label="Pinterest" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+               onmouseover="this.style.color='#e60023';this.style.transform='scale(1.1)';" 
+               onmouseout="this.style.color='#555';this.style.transform='none';">
+                <i class="fab fa-pinterest"></i>
+            </a>
+        </div>
+    </div>
             </div>
         </div>
     </div>
