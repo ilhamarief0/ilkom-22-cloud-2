@@ -59,6 +59,8 @@ Terima kasih telah mempertimbangkan untuk berkontribusi ke framework Laravel! Pa
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Untuk memastikan bahwa komunitas Laravel bersifat ramah dan terbuka bagi semua orang, harap tinjau dan patuhi [Kode Etik](https://laravel.com/docs/contributions#code-of-conduct) Laravel.
+
 
 ## Security Vulnerabilities
 
