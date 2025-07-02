@@ -64,7 +64,7 @@
                 <div class="footer__widget col-lg-3 col-md-6 mt-40"> <!-- Kolom keempat: layanan dan kebijakan -->
                     <h2 class="title" style="color: #fff;">Layanan Kami</h2>
                     <ul class="category">
-                        <li><a href="#!" style="color: #fff; transition: color 0.3s;">Pusat Dukungan</a></li>
+                        <li><a href="#!" style="color: #fff; transition: color 0.3s;">Pusat Bantuan</a></li>
                         <li><a href="#!" style="color: #fff; transition: color 0.3s;">Syarat & Ketentuan</a></li>
                         <li><a href="#!" style="color: #fff; transition: color 0.3s;">Pengiriman</a></li>
                         <li><a href="#!" style="color: #fff; transition: color 0.3s;">Kebijakan Privasi</a></li>
