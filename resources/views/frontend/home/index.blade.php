@@ -10,7 +10,7 @@
                         <img src="assets/img/icon/feat_01.svg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Free Shipping</h3>
+                        <h3>Gratis Belanja</h3>
                         <p>Gratis ongkir belanja $100+</p>
                     </div>
                 </div>
