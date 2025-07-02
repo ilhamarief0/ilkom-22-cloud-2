@@ -28,8 +28,8 @@
 <body>
     <div class="body_wrap"> <!-- Pembungkus seluruh isi halaman -->
 
-        <!-- Animasi loading saat halaman dibuka -->
-        <div class="preloader_part">
+        <!-- Preloader Area -->
+        <div class="preloader_part" id="preloader" role="status" aria-label="Loading">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
@@ -49,20 +49,14 @@
         @yield('content')
         @include('frontend.layouts.footer')
 
-        <!-- Cookie Consent Area -->
-        <div class="cookies-area" id="cookieConsent" role="alert" aria-live="polite">
-            <p>
-                This website uses cookies to improve your experience. By using this site, you agree to our 
-                <a href="/privacy-policy" target="_blank">Data Protection Policy</a>.
-            </p>
-            <div class="cookie-actions">
-                <button class="cookie-btn" id="acceptCookies" aria-label="Accept cookies">Accept</button>
-                <a href="/cookie-policy" class="read-more" aria-label="Read more about cookie policy">Read More</a>
+        <!-- Area pemberitahuan penggunaan cookie -->
+        <div class="cookies-area">
+            <p>This website uses cookies to improve your experience. By using this website, you agree to our <a href="#">Data Protection Policy</a>.</p>
+            <a href="#" class="read-more">Read more</a>
+            <div>
+                <button class="cookie-btn">Accept</button>
             </div>
         </div>
-
-        <!-- Tombol untuk menutup cookie consent -->
-        <button class="cookie-close" id="closeCookieConsent" aria-label="Close cookie consent">×</button>
     </div>
 
     <!-- Tempat menyisipkan script tambahan melalui Blade -->
