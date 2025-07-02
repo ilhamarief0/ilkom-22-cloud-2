@@ -16,7 +16,7 @@
 									<a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a>
 									<!--end::Actions-->
 								</div>
-								<!--end::Info-->
+								<!--end::Infoo-->
 								<!--begin::Toolbar-->
 								<div class="d-flex align-items-center">
 									<!--begin::Actions-->
