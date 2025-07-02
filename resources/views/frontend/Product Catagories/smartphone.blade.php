@@ -4020,54 +4020,68 @@
     <!-- recent product end -->
 
     <!-- banner start -->
-    <div class="vd-banner">
-        <div class="container">
-            <div class="row mt-none-30">
-                <div class="col-lg-7 mt-30">
-                    <div class="vd-banner__single pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_02.jpg">
-                        <div class="content">
-                            <h2>Buy One. Get Free delivery</h2>
-                            <p>Reference site about Lorem Ipsum</p>
-                            <div class="banner__btn mt-20">
-                                <a class="thm-btn thm-btn__black" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                    <i class="far fa-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="thumb">
-                            <img src="assets/img/product/img_49.png" alt="">
-                        </div>
-                        <div class="vd-banner__offer">
-                            <span class="offer">25% <br> <span>off</span></span>
+  <div class="vd-banner" style="padding: 60px 0; background-color: #f9f9f9;">
+    <div class="container">
+        <div class="row mt-none-30">
+            <!-- Banner Kiri -->
+            <div class="col-lg-7 mt-30">
+                <div class="vd-banner__single pos-rel ul_li_between" 
+                     style="display: flex; justify-content: space-between; align-items: center; background: url('assets/img/bg/bg_02.jpg') no-repeat center/cover; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative;">
+                    
+                    <div class="content" style="color: #fff; max-width: 55%;">
+                        <h2 style="font-size: 32px; font-weight: bold;">Buy One. Get Free delivery</h2>
+                        <p style="margin-top: 10px;">Reference site about Lorem Ipsum</p>
+                        <div class="banner__btn mt-20" style="margin-top: 20px;">
+                            <a class="thm-btn thm-btn__black" href="#!" 
+                               style="background: #000; color: #fff; padding: 12px 25px; border-radius: 8px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: background 0.3s;">
+                                <span class="btn-wrap">
+                                    <span>Shop Now</span>
+                                    <span style="display: none;">Shop Now</span>
+                                </span>
+                                <i class="far fa-long-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
+
+                    <div class="thumb" style="max-width: 40%;">
+                        <img src="assets/img/product/img_49.png" alt="" style="max-width: 100%;">
+                    </div>
+
+                    <div class="vd-banner__offer" 
+                         style="position: absolute; top: 20px; right: 20px; background: #ff5e5e; color: #fff; padding: 15px 20px; border-radius: 10px; text-align: center;">
+                        <span class="offer" style="font-size: 20px; font-weight: bold;">25% <br><span style="font-size: 14px;">off</span></span>
+                    </div>
                 </div>
-                <div class="col-lg-5 mt-30">
-                    <div class="vd-banner__single vd-banner__single-two pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_03.jpg">
-                        <div class="content">
-                            <h2>Buy One. Get Free</h2>
-                            <p>Widescreen 4k ultra Laptop</p>
-                            <div class="banner__btn mt-20">
-                                <a class="thm-btn thm-btn__black thm-btn__md  text-lowercase" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                </a>
-                            </div>
+            </div>
+
+            <!-- Banner Kanan -->
+            <div class="col-lg-5 mt-30">
+                <div class="vd-banner__single pos-rel ul_li_between" 
+                     style="display: flex; justify-content: space-between; align-items: center; background: url('assets/img/bg/bg_03.jpg') no-repeat center/cover; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative;">
+                    
+                    <div class="content" style="color: #fff; max-width: 55%;">
+                        <h2 style="font-size: 28px; font-weight: bold;">Buy One. Get Free</h2>
+                        <p style="margin-top: 10px;">Widescreen 4k ultra Laptop</p>
+                        <div class="banner__btn mt-20" style="margin-top: 20px;">
+                            <a class="thm-btn thm-btn__black thm-btn__md text-lowercase" href="#!" 
+                               style="background: #000; color: #fff; padding: 10px 20px; border-radius: 8px; display: inline-block; text-decoration: none;">
+                                <span class="btn-wrap">
+                                    <span>Shop Now</span>
+                                    <span style="display: none;">Shop Now</span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="thumb">
-                            <img src="assets/img/product/img_50.png" alt="">
-                        </div>
+                    </div>
+
+                    <div class="thumb" style="max-width: 40%;">
+                        <img src="assets/img/product/img_50.png" alt="" style="max-width: 100%;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- banner end -->
 
     <!-- rd category start -->
