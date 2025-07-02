@@ -98,7 +98,7 @@
                 </ul>
 
                 <!-- Tanggal dan ikon sosial media -->
-               <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; color: #333; border-radius: 4px; width: 100%; max-width: 600px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; color: #333; border-radius: 4px; width: 100%; max-width: 600px;">
         <div style="font-size: 12px; display: flex; align-items: center;">
             <i class="fal fa-calendar-alt" style="margin-right: 5px; color: #555;"></i> 
             <span>Friday, July 27, 2020</span>

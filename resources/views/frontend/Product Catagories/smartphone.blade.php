@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-
+                                                                                                        
 <!-- feature start -->
     <div class="feature pt-40 pb-30">
         <div class="container">
