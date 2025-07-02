@@ -79,33 +79,35 @@ class AuthController extends Controller
         try {
             // Validasi input dari form signup
             $validated = $request->validate([
-                'fullname' => ['required', 'string', 'max:255'], // Validasi nama lengkap
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'], // Email unik
-                'password' => ['required', 'min:8', 'confirmed'], // Password minimal 8 dan konfirmasi
+                'name' => ['required', 'string', 'max:255'], // Sekarang cocok dengan name="name"
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'min:8', 'confirmed'], // Sekarang mencari password_confirmation
             ]);
 
             // Simpan data user baru ke database
-            User::create([
-                'name' => $request->fullname,
+            $user = User::create([
+                'name' => $request->name, // Berubah dari fullname menjadi name
                 'email' => $request->email,
-                'password' => Hash::make($request->password), // Enkripsi password
+                'password' => Hash::make($request->password),
             ]);
 
-            // Kembalikan respons sukses
-            return response()->json(['success' => true, 'message' => 'Registrasi berhasil! Silakan login.']);
+            // Redirect kembali dengan pesan sukses
+            return redirect()->back()->with('message', 'Registrasi berhasil! Silakan login.');
 
         } catch (ValidationException $e) {
-            // Tangani error validasi khusus
-            return response()->json([
-                'success' => false,
-                'message' => 'Registrasi gagal. Harap periksa kembali isian Anda.',
-                'errors' => $e->errors()
-            ], 422); // Gunakan kode 422 untuk error validasi
+            // Redirect kembali dengan error validasi dan input sebelumnya
+            return redirect()->back()->withErrors($e->errors())->withInput();
 
         } catch (\Exception $e) {
             // Tangani error umum/server
-            \Log::error('Registration error: ' . $e->getMessage()); // Logging error
-            return response()->json(['success' => false, 'message' => 'Terjadi kesalahan server saat registrasi. Silakan coba lagi nanti.'], 500);
+            \Log::error('Registration error: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Terjadi kesalahan server saat registrasi. Silakan coba lagi nanti.')->withInput();
         }
+    }
+
+    public function actionlogout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

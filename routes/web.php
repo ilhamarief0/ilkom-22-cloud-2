@@ -22,10 +22,9 @@ Route::middleware('guest')->group(function(){
         Route::get('/login', 'showloginform')->name('login');
         Route::post('/login-post', 'login')->name('login.post');
         Route::post('actionsignup', 'actionsignup')->name('signup');
+        Route::get('actionlogout','actionlogout')->name('logout');
     });
 });
-
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function(){
     Route::controller(DashboardController::class)->group(function(){

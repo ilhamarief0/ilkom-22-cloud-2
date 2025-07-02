@@ -125,33 +125,32 @@
             					@endif
 
 								<!--begin::Form-->
-								<form class="form" novalidate="novalidate" id="kt_login_signup_form"/>
-									@csrf
-									<div class="form-group py-3 m-0">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Fullname" name="fullname" autocomplete="off" />
-									</div>
-									<div class="form-group py-3 border-top m-0">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="email" placeholder="Email" name="email" autocomplete="off" />
-									</div>
-									<div class="form-group py-3 border-top m-0">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Password" name="password" autocomplete="off" />
-									</div>
-									<div class="form-group py-3 border-top m-0">
-										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Confirm password" name="cpassword" autocomplete="off" />
-									</div>
-									<div class="form-group mt-5">
-										<div class="checkbox-inline">
-											<label class="checkbox checkbox-outline">
-											<input type="checkbox" name="agree" />
-											<span></span>I Agree the
-											<a href="#" class="ml-1">terms and conditions</a>.</label>
+									<form class="form" method="POST" action="/your-signup-route" novalidate="novalidate" id="kt_login_signup_form">
+										<div class="form-group py-3 m-0">
+											<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Fullname" name="name" autocomplete="off" />
 										</div>
-									</div>
-									<div class="form-group d-flex flex-wrap flex-center">
-										<button id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Submit</button>
-										<button id="kt_login_signup_cancel" class="btn btn-outline-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
-									</div>
-								</form>
+										<div class="form-group py-3 border-top m-0">
+											<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="email" placeholder="Email" name="email" autocomplete="off" />
+										</div>
+										<div class="form-group py-3 border-top m-0">
+											<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Password" name="password" autocomplete="off" />
+										</div>
+										<div class="form-group py-3 border-top m-0">
+											<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Confirm password" name="password_confirmation" autocomplete="off" />
+										</div>
+										<div class="form-group mt-5">
+											<div class="checkbox-inline">
+												<label class="checkbox checkbox-outline">
+												<input type="checkbox" name="agree" />
+												<span></span>I Agree the
+												<a href="#" class="ml-1">terms and conditions</a>.</label>
+											</div>
+										</div>
+										<div class="form-group d-flex flex-wrap flex-center">
+											<button type="submit" id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Submit</button>
+											<button type="button" id="kt_login_signup_cancel" class="btn btn-outline-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
+										</div>
+									</form>
 								<!--end::Form-->
 							</div>
 							<!--end::Signup-->
