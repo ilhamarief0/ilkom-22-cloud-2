@@ -134,5 +134,10 @@ class AuthController extends Controller
 
         // 4. Hapus Akun
         $user->delete();
+
+        // 5. Invalidasi Sesi dan Regenerasi Token CSRF
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
     }
 }
