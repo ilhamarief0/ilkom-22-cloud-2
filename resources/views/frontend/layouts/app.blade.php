@@ -77,6 +77,24 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollTopBtn" title="Kembali ke atas" style="display:none; position:fixed; bottom:40px; right:30px; z-index:999; background:#ffcc00; border:none; padding:10px; border-radius:50%; cursor:pointer;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Script untuk tombol scroll -->
+        <script>
+            window.onscroll = function () {
+                document.getElementById('scrollTopBtn').style.display = window.scrollY > 200 ? 'block' : 'none';
+            };
+            document.getElementById('scrollTopBtn').onclick = function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        </script>
+
 </body>
 
 </html> <!-- Akhir dokumen HTML -->
