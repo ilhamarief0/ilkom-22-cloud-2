@@ -124,7 +124,7 @@
             					</div>
             					@endif
 
-								<!--begin::Form-->
+								<!--begin::Form -->
 								<form class="form" novalidate="novalidate" id="kt_login_signup_form"/>
 									@csrf
 									<div class="form-group py-3 m-0">
