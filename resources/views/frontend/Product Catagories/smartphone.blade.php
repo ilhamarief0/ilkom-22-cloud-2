@@ -4,57 +4,61 @@
 <main>
                                                                                                         
 <!-- feature start -->
-    <div class="feature pt-40 pb-30">
-        <div class="container">
-            <div class="feature__wrap ul_li">
-                <div class="feature__item ul_li">
-                    <div class="icon">
-                        <img src="assets/img/icon/feat_01.svg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Free Shipping</h3>
-                        <p>Free shipping over $100</p>
-                    </div>
+<div class="feature pt-40 pb-30" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="feature__wrap ul_li" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div class="feature__item ul_li" style="display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 300px;">
+                <div class="icon">
+                    <img src="assets/img/icon/feat_01.svg" alt="Free Shipping Icon" style="width: 40px;">
                 </div>
-                <div class="feature__item ul_li">
-                    <div class="icon">
-                        <img src="assets/img/icon/feat_02.svg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Payment Secure</h3>
-                        <p>Got 100% Payment Safe</p>
-                    </div>
+                <div class="content">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Free Shipping</h3>
+                    <p style="margin: 0; font-size: 14px; color: #666;">Free shipping over $100</p>
                 </div>
-                <div class="feature__item ul_li">
-                    <div class="icon">
-                        <img src="assets/img/icon/feat_03.svg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Support 24/7</h3>
-                        <p>Top quialty 24/7 Support</p>
-                    </div>
+            </div>
+
+            <div class="feature__item ul_li" style="display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 300px;">
+                <div class="icon">
+                    <img src="assets/img/icon/feat_02.svg" alt="Secure Payment Icon" style="width: 40px;">
                 </div>
-                <div class="feature__item ul_li">
-                    <div class="icon">
-                        <img src="assets/img/icon/feat_04.svg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>100% Money Back</h3>
-                        <p>Cutomers Money Backs</p>
-                    </div>
+                <div class="content">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Secure Payment</h3>
+                    <p style="margin: 0; font-size: 14px; color: #666;">100% safe payment guaranteed</p>
                 </div>
-                <div class="feature__item ul_li">
-                    <div class="icon">
-                        <img src="assets/img/icon/feat_05.svg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Quality Products</h3>
-                        <p>We Insure Product Quailty</p>
-                    </div>
+            </div>
+
+            <div class="feature__item ul_li" style="display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 300px;">
+                <div class="icon">
+                    <img src="assets/img/icon/feat_03.svg" alt="Support Icon" style="width: 40px;">
+                </div>
+                <div class="content">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">24/7 Support</h3>
+                    <p style="margin: 0; font-size: 14px; color: #666;">Top quality 24/7 customer support</p>
+                </div>
+            </div>
+
+            <div class="feature__item ul_li" style="display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 300px;">
+                <div class="icon">
+                    <img src="assets/img/icon/feat_04.svg" alt="Money Back Icon" style="width: 40px;">
+                </div>
+                <div class="content">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">100% Money Back</h3>
+                    <p style="margin: 0; font-size: 14px; color: #666;">Guaranteed refunds for customers</p>
+                </div>
+            </div>
+
+            <div class="feature__item ul_li" style="display: flex; align-items: center; gap: 15px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 300px;">
+                <div class="icon">
+                    <img src="assets/img/icon/feat_05.svg" alt="Quality Products Icon" style="width: 40px;">
+                </div>
+                <div class="content">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Quality Products</h3>
+                    <p style="margin: 0; font-size: 14px; color: #666;">We ensure top product quality</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- feature end -->
 
