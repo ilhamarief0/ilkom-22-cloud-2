@@ -380,7 +380,7 @@
                                             </ul>
                                             <span>(126) Review</span>
                                         </div>
-                                        <h2 class="product__title"><a href="shop-single.html">BenQ HT2050A 1080P Home Theater Projector Lumens</a></h2>
+                                        <h2 class="product__title"><a href="shop-single.html">BenQ HT2050A 1080P  Theater Projector Lumens</a></h2>
                                         <h4 class="product__price"><span class="new">$22.11</span><span class="old">$45.23</span></h4>
                                     </div>
                                     <ul class="product__action">
