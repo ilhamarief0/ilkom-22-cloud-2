@@ -66,77 +66,79 @@
         .header__lang ul li a {
             font-style: italic;
         }
-
     </style>
+
+    <!-- CSS tambahan untuk bagian kategori produk -->
     <style>
-    .product-cat__nav button {
-        border: none;
-        padding: 4px;
-        background: transparent;
-        transition: transform 0.2s ease, border 0.2s ease;
-        border-radius: 6px;
-    }
-    .product-cat__nav button.active,
-    .product-cat__nav button:hover {
-        transform: scale(1.05);
-        border: 2px solid #ddd;
-    }
+        .product-cat__nav button {
+            border: none;
+            padding: 4px;
+            background: transparent;
+            transition: transform 0.2s ease, border 0.2s ease;
+            border-radius: 6px;
+        }
 
-    .product-cat__img img {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease;
-    }
+        .product-cat__nav button.active,
+        .product-cat__nav button:hover {
+            transform: scale(1.05);
+            border: 2px solid #ddd;
+        }
 
-    .product-cat__img img:hover {
-        transform: scale(1.02);
-    }
+        .product-cat__img img {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
 
-    .product-cat__item {
-        border: 1px solid #eee;
-        padding: 20px;
-        border-radius: 16px;
-        transition: box-shadow 0.3s ease;
-        background-color: #fff;
-    }
+        .product-cat__img img:hover {
+            transform: scale(1.02);
+        }
 
-    .product-cat__item:hover {
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
-    }
+        .product-cat__item {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 16px;
+            transition: box-shadow 0.3s ease;
+            background-color: #fff;
+        }
 
-    .product-cat__content h3.title {
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-weight: 600;
-    }
+        .product-cat__item:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+        }
 
-    .product-cat__content ul li a {
-        color: #333;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.2s ease;
-    }
+        .product-cat__content h3.title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
 
-    .product-cat__content ul li a:hover {
-        color: #ff6600;
-    }
+        .product-cat__content ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
 
-    .product-cat__nav img {
-        width: 48px;
-        height: 48px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-</style>
+        .product-cat__content ul li a:hover {
+            color: #ff6600;
+        }
 
-    
+        .product-cat__nav img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 
     <!-- Baris paling atas: info toko dan sosial media -->
     <div class="header__top-info-wrap d-none d-lg-block">
         <div class="container">
             <div class="header__top-info ul_li_between mt-none-10">
-              <ul class="ul_li mt-10" style="list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif; border-radius: 8px;">
-    <!-- Info lokasi toko -->
+
+                <!-- Informasi lokasi, pelacakan, kontak, dan sambutan -->
+                <ul class="ul_li mt-10" style="list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif; border-radius: 8px;">
+                    <!-- Info lokasi toko -->
                     <li style="padding: 10px; display: flex; align-items: center; background-color: #f9f9f9; cursor: pointer; transition: background-color 0.3s;">
                         <i class="far fa-map-marker-alt" aria-hidden="true" style="color: #FF5733; font-size: 16px; margin-right: 10px;"></i>
                         <span style="color: #333; font-size: 14px;">Lokasi Toko</span>
@@ -160,38 +162,46 @@
 
                 <!-- Tanggal dan ikon sosial media -->
                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; color: #333; border-radius: 4px; width: 100%; max-width: 600px;">
-        <div style="font-size: 12px; display: flex; align-items: center;">
-            <i class="fal fa-calendar-alt" style="margin-right: 5px; color: #555;"></i> 
-            <span>Friday, July 27, 2020</span>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <a href="#!" aria-label="Facebook" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
-               onmouseover="this.style.color='#3b5998';this.style.transform='scale(1.1)';" 
-               onmouseout="this.style.color='#555';this.style.transform='none';">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#!" aria-label="Twitter" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
-               onmouseover="this.style.color='#1da1f2';this.style.transform='scale(1.1)';" 
-               onmouseout="this.style.color='#555';this.style.transform='none';">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#!" aria-label="Instagram" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
-               onmouseover="this.style.color='#d62976';this.style.transform='scale(1.1)';" 
-               onmouseout="this.style.color='#555';this.style.transform='none';">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#!" aria-label="YouTube" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
-               onmouseover="this.style.color='#ff0000';this.style.transform='scale(1.1)';" 
-               onmouseout="this.style.color='#555';this.style.transform='none';">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#!" aria-label="Pinterest" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
-               onmouseover="this.style.color='#e60023';this.style.transform='scale(1.1)';" 
-               onmouseout="this.style.color='#555';this.style.transform='none';">
-                <i class="fab fa-pinterest"></i>
-            </a>
-        </div>
-    </div>
+                    <!-- Tanggal -->
+                    <div style="font-size: 12px; display: flex; align-items: center;">
+                        <i class="fal fa-calendar-alt" style="margin-right: 5px; color: #555;"></i> 
+                        <span>Friday, July 27, 2020</span>
+                    </div>
+
+                    <!-- Ikon sosial media -->
+                    <div style="display: flex; gap: 10px;">
+                        <!-- Facebook -->
+                        <a href="#!" aria-label="Facebook" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: none; color: #555; transition: transform 0.2s ease, color 0.2s ease;" 
+                           onmouseover="this.style.color='#3b5998';this.style.transform='scale(1.1)';" 
+                           onmouseout="this.style.color='#555';this.style.transform='none';">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- Twitter -->
+                        <a href="#!" aria-label="Twitter" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px;" 
+                           onmouseover="this.style.color='#1da1f2';this.style.transform='scale(1.1)';" 
+                           onmouseout="this.style.color='#555';this.style.transform='none';">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#!" aria-label="Instagram" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px;" 
+                           onmouseover="this.style.color='#d62976';this.style.transform='scale(1.1)';" 
+                           onmouseout="this.style.color='#555';this.style.transform='none';">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#!" aria-label="YouTube" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px;" 
+                           onmouseover="this.style.color='#ff0000';this.style.transform='scale(1.1)';" 
+                           onmouseout="this.style.color='#555';this.style.transform='none';">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <!-- Pinterest -->
+                        <a href="#!" aria-label="Pinterest" style="font-size: 14px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px;" 
+                           onmouseover="this.style.color='#e60023';this.style.transform='scale(1.1)';" 
+                           onmouseout="this.style.color='#555';this.style.transform='none';">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -207,39 +217,38 @@
                 </a>
             </div>
 
-            <!-- Form pencarian -->
-           <form class="header__search-box" action="#" aria-label="Form Pencarian" style="display: flex; gap: 10px; align-items: center;">
-    <div class="select-box">
-        <label for="category" class="sr-only">Kategori</label>
-        <select id="category" name="category" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
-            <option value="">Semua Kategori</option>
-            <option value="4">Koleksi Musim Panas</option>
-            <option value="5">Sarapan & Produk Susu</option>
-            <option value="6">Minuman & Minuman</option>
-            <option value="7">Kotak Cokelat</option>
-            <option value="8">Pojok Makanan Kering</option>
-            <option value="9">Makanan Beku</option>
-            <option value="10">Pojok Makanan Bayi</option>
-            <option value="11">Susu & Jus</option>
-            <option value="12">Organik & Makanan Ringan</option>
-        </select>
-    </div>
-    <label for="search" class="sr-only">Cari Barang</label>
-    <input 
-        type="text" 
-        name="search" 
-        id="search" 
-        placeholder="Cari barang, kategori, atau merek..." 
-        required 
-        style="flex: 1; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
-    <button 
-        type="submit" 
-        aria-label="Cari" 
-        style="padding: 8px 12px; background-color:rgb(255, 145, 0); color: white; border: none; border-radius: 4px; cursor: pointer;">
-        <i class="far fa-search" aria-hidden="true"></i>
-    </button>
-</form>
-
+            <!-- Form pencarian produk -->
+            <form class="header__search-box" action="#" aria-label="Form Pencarian" style="display: flex; gap: 10px; align-items: center;">
+                <div class="select-box">
+                    <label for="category" class="sr-only">Kategori</label>
+                    <select id="category" name="category" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                        <option value="">Semua Kategori</option>
+                        <option value="4">Koleksi Musim Panas</option>
+                        <option value="5">Sarapan & Produk Susu</option>
+                        <option value="6">Minuman & Minuman</option>
+                        <option value="7">Kotak Cokelat</option>
+                        <option value="8">Pojok Makanan Kering</option>
+                        <option value="9">Makanan Beku</option>
+                        <option value="10">Pojok Makanan Bayi</option>
+                        <option value="11">Susu & Jus</option>
+                        <option value="12">Organik & Makanan Ringan</option>
+                    </select>
+                </div>
+                <label for="search" class="sr-only">Cari Barang</label>
+                <input 
+                    type="text" 
+                    name="search" 
+                    id="search" 
+                    placeholder="Cari barang, kategori, atau merek..." 
+                    required 
+                    style="flex: 1; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                <button 
+                    type="submit" 
+                    aria-label="Cari" 
+                    style="padding: 8px 12px; background-color:rgb(255, 145, 0); color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    <i class="far fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
 
             <!-- Pilihan bahasa dan mata uang -->
             <div class="header__lang ul_li">
