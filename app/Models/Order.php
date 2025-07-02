@@ -10,6 +10,6 @@ class Order extends Model
         'order_id',// ID unik untuk pesanan
         'user_id',// ID user yang membuat pesanan
         'total_price',// Total harga keseluruhan pesanan
-        'status'
+        'status' // Status pesanan (misal: 'pending', 'completed', 'cancelled')
     ];
 }
