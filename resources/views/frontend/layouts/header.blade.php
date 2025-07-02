@@ -180,31 +180,104 @@
 </form>
 
 
-            <!-- Pilihan bahasa dan mata uang -->
-            <div class="header__lang ul_li">
-                <div class="header__language mr-15">
-                    <ul>
-                        <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="lang_sub_list">
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">BDT</a></li>
-                                <li><a href="#">EUR</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header__language">
-                    <ul>
-                        <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="USD Flag">English <i class="far fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="lang_sub_list">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">Arabic</a></li>
-                                <li><a href="#">Bangla</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Pilihan Bahasa dan Mata Uang -->
+<div class="header__lang ul_li">
+
+    <!-- Pilihan Mata Uang -->
+    <div class="header__language mr-15">
+        <button class="lang-btn" onclick="toggleDropdown(this)" aria-haspopup="true" aria-expanded="false">
+            USD <i class="far fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <ul class="lang_sub_list">
+            <li><a href="#!" data-currency="USD">USD</a></li>
+            <li><a href="#!" data-currency="BDT">BDT</a></li>
+            <li><a href="#!" data-currency="EUR">EUR</a></li>
+        </ul>
+    </div>
+
+    <!-- Pilihan Bahasa -->
+    <div class="header__language">
+        <button class="lang-btn" onclick="toggleDropdown(this)" aria-haspopup="true" aria-expanded="false">
+            <img src="{{ asset('assets/img/icon/usd_flag.png') }}" alt="Bendera USD" width="20" height="13">
+            English <i class="far fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <ul class="lang_sub_list">
+            <li><a href="#!" data-lang="en">English</a></li>
+            <li><a href="#!" data-lang="ar">Arabic</a></li>
+            <li><a href="#!" data-lang="bn">Bangla</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Script Toggle -->
+<script>
+    function toggleDropdown(button) {
+        const dropdown = button.nextElementSibling;
+        const isVisible = dropdown.style.display === 'block';
+        
+        // Tutup semua dropdown lain
+        document.querySelectorAll('.lang_sub_list').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+
+        if (!isVisible) {
+            dropdown.style.display = 'block';
+            button.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    // Tutup dropdown jika klik di luar
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header__language')) {
+            document.querySelectorAll('.lang_sub_list').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+        }
+    });
+</script>
+
+<!-- Styling Tambahan -->
+<style>
+    .lang_sub_list {
+        display: none;
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-top: 5px;
+        z-index: 999;
+        padding: 8px 0;
+        list-style: none;
+        min-width: 120px;
+    }
+
+    .lang_sub_list li a {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .lang_sub_list li a:hover {
+        background-color: #f5f5f5;
+    }
+
+    .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+    }
+
+    .header__language {
+        position: relative;
+    }
+</style>
+
 
             <!-- Ikon user, wishlist, dan keranjang -->
             <div class="header__icons ul_li">
@@ -232,95 +305,24 @@
         <div class="container">
             <div class="header__wrap ul_li_between">
 
-                <!-- Daftar Kategori Produk -->
-<nav class="header__cat ul_li" aria-label="Kategori Produk">
-    <!-- Tombol Hamburger -->
-    <button class="hamburger_menu active" aria-label="Tampilkan Kategori" aria-expanded="false" onclick="toggleCategoryMenu(this)">
-        <i class="fal fa-bars" aria-hidden="true"></i>
-    </button>
-
-    <!-- Menu Kategori -->
-    <ul class="category ul_li" id="categoryMenu">
-        <li>
-            <a href="#!" aria-label="Laptops & Computers">
-                <img src="{{ asset('assets/img/icon/hc_01.svg') }}" alt="Ikon Laptop" loading="lazy">
-                Laptops & Computers
-            </a>
-        </li>
-        <li>
-            <a href="#!" aria-label="CCTV & Camera">
-                <img src="{{ asset('assets/img/icon/hc_02.svg') }}" alt="Ikon CCTV" loading="lazy">
-                CCTV & Camera
-            </a>
-        </li>
-        <li>
-            <a href="#!" aria-label="Home Equipment">
-                <img src="{{ asset('assets/img/icon/hc_03.svg') }}" alt="Ikon Peralatan Rumah" loading="lazy">
-                Home Equipment
-            </a>
-        </li>
-        <li>
-            <a href="#!" aria-label="TV & Audios">
-                <img src="{{ asset('assets/img/icon/hc_04.svg') }}" alt="Ikon TV dan Audio" loading="lazy">
-                TV & Audios
-            </a>
-        </li>
-        <li>
-            <a href="#!" aria-label="Printers & Ink">
-                <img src="{{ asset('assets/img/icon/hc_05.svg') }}" alt="Ikon Printer dan Tinta" loading="lazy">
-                Printers & Ink
-            </a>
-        </li>
-        <li>
-            <a href="#!" aria-label="Gaming & Fun">
-                <img src="{{ asset('assets/img/icon/hc_06.svg') }}" alt="Ikon Gaming dan Hiburan" loading="lazy">
-                Gaming & Fun
-            </a>
-        </li>
-    </ul>
-</nav>
-
-<!-- Optional: Toggle Script -->
-<script>
-    function toggleCategoryMenu(button) {
-        const menu = document.getElementById('categoryMenu');
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        menu.classList.toggle('show');
-    }
-</script>
-
-<!-- Optional CSS -->
-<style>
-    .category {
-        display: none;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 10px;
-    }
-    .category.show {
-        display: flex;
-    }
-    .category li {
-        list-style: none;
-    }
-    .category a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        font-weight: 500;
-        color: #333;
-        transition: color 0.2s ease;
-    }
-    .category a:hover {
-        color: #007bff;
-    }
-    .category img {
-        width: 24px;
-        height: 24px;
-    }
-</style>
+                <!-- Daftar kategori dengan ikon -->
+                <div class="header__cat ul_li">
+                    <div class="hamburger_menu">
+                        <a href="javascript:void(0);" class="active" aria-label="Kategori">
+                            <div class="icon bar">
+                                <span><i class="fal fa-bars" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="category ul_li">
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_01.svg" alt="Ikon Laptop"></span>Laptops & Computers</a></li>
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_02.svg" alt="Ikon CCTV"></span>CCTV & Camera</a></li>
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_03.svg" alt="Ikon Home Equipment"></span>Home Equipment</a></li>
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_04.svg" alt="Ikon TV"></span>Tv & Audios</a></li>
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_05.svg" alt="Ikon Printer"></span>Printers & Ink</a></li>
+                        <li><a href="#!"><span><img src="assets/img/icon/hc_06.svg" alt="Ikon Gaming"></span>Gaming & Fun</a></li>
+                    </ul>
+                </div>
 
                 <!-- Tombol login atau daftar -->
                 <div class="login-sign-btn">
