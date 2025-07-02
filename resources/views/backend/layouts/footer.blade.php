@@ -15,6 +15,12 @@
             <a href="https://keenthemes.com/metronic" target="_blank" rel="noopener" class="nav-link px-3">Contact</a>
         </nav>
 
+        <div class="order-3 mt-3 mt-md-0">
+            <a href="https://facebook.com" class="me-3 text-muted"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" class="me-3 text-muted"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" class="text-muted"><i class="fab fa-instagram"></i></a>
+        </div>
+
     </div>
 </footer>
 
