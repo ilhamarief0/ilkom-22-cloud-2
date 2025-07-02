@@ -188,7 +188,7 @@
 								<a href="#" class="text-muted text-hover-primary ml-4">Contact</a>
 							</div>
 						</div>
-						<!--end: Aside footer desktop-->
+						<!--end: Aside footer untuk versi desktop-->
 					</div>
 					<!--end: Aside Container-->
 				</div>
