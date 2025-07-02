@@ -104,10 +104,11 @@ class AuthController extends Controller
             return redirect()->back()->with('error', 'Terjadi kesalahan server saat registrasi. Silakan coba lagi nanti.')->withInput();
         }
     }
-
+    //function untuk log out
     public function actionlogout()
     {
-        Auth::logout();
+        
+        Auth::logout();//for logout
         return redirect('/');
     }
 }
