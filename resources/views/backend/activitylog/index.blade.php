@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 @section('content')
-<!--begin::Content -->
+<!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Entry-->
     <div class="d-flex flex-column-fluid">
