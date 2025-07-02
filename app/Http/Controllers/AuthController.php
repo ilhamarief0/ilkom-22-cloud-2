@@ -108,7 +108,7 @@ class AuthController extends Controller
     public function actionlogout()
     {
         
-        Auth::logout();
+        Auth::logout();//for logout
         return redirect('/');
     }
 }
