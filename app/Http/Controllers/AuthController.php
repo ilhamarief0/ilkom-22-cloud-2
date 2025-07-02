@@ -127,9 +127,21 @@ class AuthController extends Controller
         ]);
          // 2. Ambil User yang sedang login
         $user = $request->user(); // Atau Auth::user();
-        
+
         // 3. Logout User (opsional, tapi disarankan sebelum menghapus)
         // Ini memastikan sesi pengguna berakhir setelah akun dihapus.
         Auth::logout();
+
+        // 4. Hapus Akun
+        $user->delete();
+
+        // 5. Invalidasi Sesi dan Regenerasi Token CSRF
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // 6. Redirect atau Beri Pesan Sukses
+        // Setelah akun terhapus, redirect ke halaman utama atau halaman login
+        // dengan pesan sukses.
+        return redirect()->route('login')->with('status', 'Akun Anda berhasil dihapus.');
     }
 }
