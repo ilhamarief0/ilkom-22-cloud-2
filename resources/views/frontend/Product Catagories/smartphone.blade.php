@@ -4020,219 +4020,138 @@
     <!-- recent product end -->
 
     <!-- banner start -->
-    <div class="vd-banner">
-        <div class="container">
-            <div class="row mt-none-30">
-                <div class="col-lg-7 mt-30">
-                    <div class="vd-banner__single pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_02.jpg">
-                        <div class="content">
-                            <h2>Buy One. Get Free delivery</h2>
-                            <p>Reference site about Lorem Ipsum</p>
-                            <div class="banner__btn mt-20">
-                                <a class="thm-btn thm-btn__black" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                    <i class="far fa-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="thumb">
-                            <img src="assets/img/product/img_49.png" alt="">
-                        </div>
-                        <div class="vd-banner__offer">
-                            <span class="offer">25% <br> <span>off</span></span>
+<div class="vd-banner py-60">
+    <div class="container">
+        <div class="row mt-none-30">
+            <!-- Banner Kiri -->
+            <div class="col-lg-7 mt-30">
+                <div class="vd-banner__single pos-rel ul_li_between" style="background-image: url('assets/img/bg/bg_02.jpg'); background-size: cover;">
+                    <div class="content text-white">
+                        <h2>Buy One. Get Free Delivery</h2>
+                        <p>Reference site about Lorem Ipsum</p>
+                        <div class="banner__btn mt-20">
+                            <a class="thm-btn thm-btn__black" href="#!">
+                                <span class="btn-wrap">
+                                    <span>Shop Now</span><span>Shop Now</span>
+                                </span>
+                                <i class="far fa-long-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
+                    <div class="thumb">
+                        <img src="assets/img/product/img_49.png" alt="Product Banner Left" loading="lazy">
+                    </div>
+                    <div class="vd-banner__offer">
+                        <span class="offer">25% <br><span>Off</span></span>
+                    </div>
                 </div>
-                <div class="col-lg-5 mt-30">
-                    <div class="vd-banner__single vd-banner__single-two pos-rel ul_li_between bg_img" data-background="assets/img/bg/bg_03.jpg">
-                        <div class="content">
-                            <h2>Buy One. Get Free</h2>
-                            <p>Widescreen 4k ultra Laptop</p>
-                            <div class="banner__btn mt-20">
-                                <a class="thm-btn thm-btn__black thm-btn__md  text-lowercase" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                </a>
-                            </div>
+            </div>
+
+            <!-- Banner Kanan -->
+            <div class="col-lg-5 mt-30">
+                <div class="vd-banner__single vd-banner__single-two pos-rel ul_li_between" style="background-image: url('assets/img/bg/bg_03.jpg'); background-size: cover;">
+                    <div class="content text-white">
+                        <h2>Buy One. Get Free</h2>
+                        <p>Widescreen 4K Ultra Laptop</p>
+                        <div class="banner__btn mt-20">
+                            <a class="thm-btn thm-btn__black thm-btn__md text-lowercase" href="#!">
+                                <span class="btn-wrap">
+                                    <span>Shop Now</span><span>Shop Now</span>
+                                </span>
+                            </a>
                         </div>
-                        <div class="thumb">
-                            <img src="assets/img/product/img_50.png" alt="">
-                        </div>
+                    </div>
+                    <div class="thumb">
+                        <img src="assets/img/product/img_50.png" alt="Product Banner Right" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- banner end -->
+</div>
+<!-- banner end -->
 
-    <!-- rd category start -->
-    <div class="rd-category pt-60">
-        <div class="container">
-            <div class="row mt-none-30">
-                <div class="col-lg-6 col-md-12 mt-30">
-                    <div class="rd-banner ul_li" data-background="assets/img/bg/bg_05.jpg">
-                        <div class="rd-banner__content">
-                            <span>Widesceen 4k .......</span>
-                            <h3>Digital Slr Camera <br> High Defination</h3>
-                            <p>Sumptuous, filling, and temptingly</p>
-                            <div class="ul_li mt-20">
-                                <div class="upto-offer ul_li">
-                                    <span class="upto">Up <br> To</span>
-                                    <span class="offer-no">70 <span>%</span></span>
-                                </div>
-                                <h4 class="price">$ 180.99</h4>
+<!-- rd category start -->
+<div class="rd-category pt-60">
+    <div class="container">
+        <div class="row mt-none-30">
+            <!-- Banner Besar Kiri -->
+            <div class="col-lg-6 col-md-12 mt-30">
+                <div class="rd-banner ul_li" style="background-image: url('assets/img/bg/bg_05.jpg'); background-size: cover;">
+                    <div class="rd-banner__content text-white">
+                        <span>Widescreen 4k .......</span>
+                        <h3>Digital SLR Camera <br> High Definition</h3>
+                        <p>Sumptuous, filling, and temptingly</p>
+                        <div class="ul_li mt-20">
+                            <div class="upto-offer ul_li">
+                                <span class="upto">Up <br> To</span>
+                                <span class="offer-no">70 <span>%</span></span>
                             </div>
-                            <div class="banner__btn mt-40">
-                                <a class="thm-btn thm-btn__red" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                    <i class="far fa-long-arrow-right"></i>
-                                </a>
-                            </div>
+                            <h4 class="price">$180.99</h4>
                         </div>
-                        <div class="rd-banner__img">
-                            <img src="assets/img/product/img_51.png" alt="">
+                        <div class="banner__btn mt-40">
+                            <a class="thm-btn thm-btn__red" href="#!">
+                                <span class="btn-wrap">
+                                    <span>Shop Now</span><span>Shop Now</span>
+                                </span>
+                                <i class="far fa-long-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-30">
-                    <div class="rd-category__wrap">
-                        <h2 class="section-heading mb-25"><span>Camera & Dslr Item</span></h2>
-                        <ul class="rd-category__list list-unstyled" data-background="assets/img/bg/bg_04.jpg">
-                            <li class="title">Action Camera</li>
-                            <li><a href="#!">Bluetooth speaker</a></li>
-                            <li><a href="#!">Robotics vacuum </a></li>
-                            <li><a href="#!">Laser printer</a></li>
-                            <li><a href="#!">Electric frying pan</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">external hard Drive</a></li>
-                        </ul>
+                    <div class="rd-banner__img">
+                        <img src="assets/img/product/img_51.png" alt="Camera Product" loading="lazy">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mt-30">
-                    <div class="rd-category__wrap">
-                        <h2 class="section-heading mb-25"><span>Home Accesories</span></h2>
-                        <ul class="rd-category__list list-unstyled" data-background="assets/img/bg/bg_04.jpg">
-                            <li class="title">Action Camera</li>
-                            <li><a href="#!">Bluetooth speaker</a></li>
-                            <li><a href="#!">Robotics vacuum </a></li>
-                            <li><a href="#!">Laser printer</a></li>
-                            <li><a href="#!">Electric frying pan</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">external hard Drive</a></li>
-                        </ul>
-                    </div>
+            </div>
+
+            <!-- Kategori Tengah -->
+            <div class="col-lg-3 col-md-6 mt-30">
+                <div class="rd-category__wrap">
+                    <h2 class="section-heading mb-25"><span>Camera & DSLR Item</span></h2>
+                    <ul class="rd-category__list list-unstyled" style="background-image: url('assets/img/bg/bg_04.jpg'); background-size: cover;">
+                        <li class="title">Action Camera</li>
+                        <li><a href="#!">Bluetooth speaker</a></li>
+                        <li><a href="#!">Robotics vacuum</a></li>
+                        <li><a href="#!">Laser printer</a></li>
+                        <li><a href="#!">Electric frying pan</a></li>
+                        <li><a href="#!">Digital camera</a></li>
+                        <li><a href="#!">External hard drive</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Kategori Kanan -->
+            <div class="col-lg-3 col-md-6 mt-30">
+                <div class="rd-category__wrap">
+                    <h2 class="section-heading mb-25"><span>Home Accessories</span></h2>
+                    <ul class="rd-category__list list-unstyled" style="background-image: url('assets/img/bg/bg_04.jpg'); background-size: cover;">
+                        <li class="title">Smart Home</li>
+                        <li><a href="#!">Bluetooth speaker</a></li>
+                        <li><a href="#!">Robotics vacuum</a></li>
+                        <li><a href="#!">Laser printer</a></li>
+                        <li><a href="#!">Electric frying pan</a></li>
+                        <li><a href="#!">Digital camera</a></li>
+                        <li><a href="#!">External hard drive</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- rd category end -->
+</div>
+<!-- rd category end -->
 
-    <!-- brand start -->
-    <div class="brand pt-80 pb-80">
-        <div class="container">
-            <div class="brand__active">
+<!-- brand start -->
+<div class="brand py-80">
+    <div class="container">
+        <div class="brand__active d-flex flex-wrap justify-content-between align-items-center">
+            @foreach (['img_01','img_02','img_03','img_04','img_05','img_06'] as $img)
                 <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_01.png" alt="">
+                    <a href="#!" aria-label="Brand Logo {{ $img }}">
+                        <img src="{{ asset('assets/img/brand/' . $img . '.png') }}" alt="Brand {{ $img }}" loading="lazy">
                     </a>
                 </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_02.png" alt="">
-                    </a>
-                </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_03.png" alt="">
-                    </a>
-                </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_04.png" alt="">
-                    </a>
-                </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_05.png" alt="">
-                    </a>
-                </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_06.png" alt="">
-                    </a>
-                </div>
-                <div class="brand__item">
-                    <a href="#!">
-                        <img src="assets/img/brand/img_03.png" alt="">
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    <!-- brand end -->
-
-</main>
-@endsection
-
-@push('script')
-<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#checkout-form').submit(function(event){
-            event.preventDefault(); // Mencegah submit form default
-
-            let totalPrice = $('#total_price').val(); // Ambil nilai total harga
-
-            $.ajax({
-                url: "{{ url('/order') }}", // Pastikan route ini sesuai
-                method: "POST",
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-                },
-                data: {
-                    total_price: totalPrice,
-                },
-                success: function(response){
-                    console.log("Response dari server:", response);
-
-                    if (response.snap_token) {
-                        snap.pay(response.snap_token, {
-                            onSuccess: function(result) {
-                                console.log("Pembayaran Berhasil:", result);
-                                alert("Pembayaran berhasil!");
-                                window.location.href = "{{ url('/success') }}"; // Redirect ke halaman sukses
-                            },
-                            onPending: function(result) {
-                                console.log("Pembayaran Pending:", result);
-                                alert("Pembayaran masih dalam proses. Mohon tunggu!");
-                            },
-                            onError: function(result) {
-                                console.log("Pembayaran Gagal:", result);
-                                alert("Terjadi kesalahan dalam pembayaran!");
-                            },
-                        });
-                    } else {
-                        alert("Token pembayaran tidak ditemukan!");
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error AJAX:", xhr.responseText);
-                    alert("Terjadi kesalahan saat memproses transaksi.");
-                }
-            });
-        });
-    });
-</script>
-
-@endpush
+</div>
+<!-- brand end -->
