@@ -4085,70 +4085,71 @@
     <!-- banner end -->
 
     <!-- rd category start -->
-    <div class="rd-category pt-60">
-        <div class="container">
-            <div class="row mt-none-30">
-                <div class="col-lg-6 col-md-12 mt-30">
-                    <div class="rd-banner ul_li" data-background="assets/img/bg/bg_05.jpg">
-                        <div class="rd-banner__content">
-                            <span>Widesceen 4k .......</span>
-                            <h3>Digital Slr Camera <br> High Defination</h3>
-                            <p>Sumptuous, filling, and temptingly</p>
-                            <div class="ul_li mt-20">
-                                <div class="upto-offer ul_li">
-                                    <span class="upto">Up <br> To</span>
-                                    <span class="offer-no">70 <span>%</span></span>
-                                </div>
-                                <h4 class="price">$ 180.99</h4>
+  <div class="rd-category pt-60">
+    <div class="container">
+        <div class="row mt-none-30">
+            <!-- Banner -->
+            <div class="col-lg-6 col-md-12 mt-30">
+                <div class="rd-banner ul_li" style="background-image: url('assets/img/bg/bg_05.jpg'); background-size: cover; border-radius: 12px; overflow: hidden; padding: 30px;">
+                    <div class="rd-banner__content" style="color: white;">
+                        <span style="font-weight: 600;">Widescreen 4K Display</span>
+                        <h3 style="font-size: 24px; margin: 10px 0;">Digital SLR Camera <br> High Definition</h3>
+                        <p style="font-size: 14px;">Sumptuous, filling, and temptingly affordable.</p>
+                        <div class="ul_li mt-20">
+                            <div class="upto-offer ul_li" style="margin-right: 15px;">
+                                <span class="upto" style="font-size: 12px; font-weight: bold;">Up <br> To</span>
+                                <span class="offer-no" style="font-size: 28px; font-weight: bold;">70<span>%</span></span>
                             </div>
-                            <div class="banner__btn mt-40">
-                                <a class="thm-btn thm-btn__red" href="#!">
-                                    <span class="btn-wrap">
-                                        <span>Shop Now</span>
-                                        <span>Shop Now</span>
-                                    </span>
-                                    <i class="far fa-long-arrow-right"></i>
-                                </a>
-                            </div>
+                            <h4 class="price" style="font-size: 22px; color: #ffd700;">$180.99</h4>
                         </div>
-                        <div class="rd-banner__img">
-                            <img src="assets/img/product/img_51.png" alt="">
+                        <div class="banner__btn mt-40">
+                            <a class="thm-btn thm-btn__red" href="#!" style="background: #ff4c4c; color: #fff; padding: 10px 20px; border-radius: 25px; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center;">
+                                <span style="margin-right: 10px;">Shop Now</span>
+                                <i class="far fa-long-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-30">
-                    <div class="rd-category__wrap">
-                        <h2 class="section-heading mb-25"><span>Camera & Dslr Item</span></h2>
-                        <ul class="rd-category__list list-unstyled" data-background="assets/img/bg/bg_04.jpg">
-                            <li class="title">Action Camera</li>
-                            <li><a href="#!">Bluetooth speaker</a></li>
-                            <li><a href="#!">Robotics vacuum </a></li>
-                            <li><a href="#!">Laser printer</a></li>
-                            <li><a href="#!">Electric frying pan</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">external hard Drive</a></li>
-                        </ul>
+                    <div class="rd-banner__img">
+                        <img src="assets/img/product/img_51.png" alt="" style="max-width: 220px;">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mt-30">
-                    <div class="rd-category__wrap">
-                        <h2 class="section-heading mb-25"><span>Home Accesories</span></h2>
-                        <ul class="rd-category__list list-unstyled" data-background="assets/img/bg/bg_04.jpg">
-                            <li class="title">Action Camera</li>
-                            <li><a href="#!">Bluetooth speaker</a></li>
-                            <li><a href="#!">Robotics vacuum </a></li>
-                            <li><a href="#!">Laser printer</a></li>
-                            <li><a href="#!">Electric frying pan</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">Digital camera</a></li>
-                            <li><a href="#!">external hard Drive</a></li>
-                        </ul>
-                    </div>
+            </div>
+
+            <!-- Kategori 1 -->
+            <div class="col-lg-3 col-md-6 mt-30">
+                <div class="rd-category__wrap" style="background: #f8f9fa; padding: 20px; border-radius: 12px;">
+                    <h2 class="section-heading mb-20" style="font-size: 18px;"><span>Camera & DSLR Item</span></h2>
+                    <ul class="rd-category__list list-unstyled" style="background-image: url('assets/img/bg/bg_04.jpg'); background-size: cover; padding: 15px; border-radius: 10px;">
+                        <li class="title" style="font-weight: bold;">Camera Types</li>
+                        <li><a href="#!">Bluetooth Speaker</a></li>
+                        <li><a href="#!">Robotics Vacuum</a></li>
+                        <li><a href="#!">Laser Printer</a></li>
+                        <li><a href="#!">Electric Frying Pan</a></li>
+                        <li><a href="#!">Digital Camera</a></li>
+                        <li><a href="#!">External Hard Drive</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Kategori 2 -->
+            <div class="col-lg-3 col-md-6 mt-30">
+                <div class="rd-category__wrap" style="background: #f8f9fa; padding: 20px; border-radius: 12px;">
+                    <h2 class="section-heading mb-20" style="font-size: 18px;"><span>Home Accessories</span></h2>
+                    <ul class="rd-category__list list-unstyled" style="background-image: url('assets/img/bg/bg_04.jpg'); background-size: cover; padding: 15px; border-radius: 10px;">
+                        <li class="title" style="font-weight: bold;">Essentials</li>
+                        <li><a href="#!">Bluetooth Speaker</a></li>
+                        <li><a href="#!">Robotics Vacuum</a></li>
+                        <li><a href="#!">Laser Printer</a></li>
+                        <li><a href="#!">Electric Frying Pan</a></li>
+                        <li><a href="#!">Digital Camera</a></li>
+                        <li><a href="#!">External Hard Drive</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- rd category end -->
 
     <!-- brand start -->
