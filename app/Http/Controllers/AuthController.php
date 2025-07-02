@@ -115,5 +115,15 @@ class AuthController extends Controller
     {
         return view('profile.delete-account'); // Buat view ini nanti
     }
-    
+     public function destroyAccount(Request $request)
+    {
+       // 1. Validasi Password
+        // Ini adalah langkah keamanan krusial untuk memastikan
+        // bahwa yang menghapus akun adalah pemilik sah.
+        $request->validate([
+            'password' => ['required', 'current_password'], // Memastikan password yang dimasukkan sesuai dengan password user yang sedang login
+        ], [
+            'password.current_password' => 'Password yang Anda masukkan tidak sesuai dengan password akun Anda.',
+        ]);
+    }
 }
