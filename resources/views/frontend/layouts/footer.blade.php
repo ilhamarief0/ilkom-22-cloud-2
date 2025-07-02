@@ -17,7 +17,7 @@
     </div>
 
     <div class="container"> <!-- Kontainer utama footer -->
-        <div class="footer__main pt-90 pb-90"> <!-- Bagian utama footer dengan padding atas & bawa -->
+        <div class="footer__main pt-90 pb-90"> <!-- Bagian utama footer dengan padding atas & bawah -->
             <div class="row mt-none-40"> <!-- Baris kolom footer -->
 
                 <!-- Logo and Address Section -->
