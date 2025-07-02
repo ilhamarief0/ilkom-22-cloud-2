@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
 			<div class="d-flex align-items-center">
-				<!--begin::Aside Mobile Toggle-->
+				<!--begin::Aside Mobil Toggle-->
 				<button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
 					<span></span>
 				</button>
