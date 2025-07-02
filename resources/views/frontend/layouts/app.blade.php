@@ -28,8 +28,8 @@
 <body>
     <div class="body_wrap"> <!-- Pembungkus seluruh isi halaman -->
 
-        <!-- Preloader Area -->
-        <div class="preloader_part" id="preloader" role="status" aria-label="Loading">
+        <!-- Animasi loading saat halaman dibuka -->
+        <div class="preloader_part">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
