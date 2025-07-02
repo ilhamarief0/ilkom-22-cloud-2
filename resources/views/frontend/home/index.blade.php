@@ -329,7 +329,7 @@
                                             <span>(126) Review</span>
                                         </div>
                                         <h2 class="product__title"><a href="shop-single.html">Panasonic Cordless Phone System, Expandable</a></h2>
-                                        <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                        <h4 class="product__price"><span class="new">$100.12</span><span class="old">$99.22</span></h4>
                                     </div>
                                     <ul class="product__action">
                                         <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
