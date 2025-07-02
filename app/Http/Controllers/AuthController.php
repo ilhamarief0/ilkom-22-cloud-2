@@ -84,7 +84,7 @@ class AuthController extends Controller
                 'password' => ['required', 'min:8', 'confirmed'], // Sekarang mencari password_confirmation
             ]);
 
-            
+            // Simpan data user baru ke database
             $user = User::create([
                 'name' => $request->name, // Berubah dari fullname menjadi name
                 'email' => $request->email,
