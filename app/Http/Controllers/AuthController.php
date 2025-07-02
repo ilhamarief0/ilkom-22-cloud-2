@@ -110,4 +110,10 @@ class AuthController extends Controller
         Auth::logout();//for logout
         return redirect('/');
     }
+
+     public function deleteAccountForm()
+    {
+        return view('profile.delete-account'); // Buat view ini nanti
+    }
+    
 }
