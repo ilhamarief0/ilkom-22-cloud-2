@@ -63,52 +63,67 @@
     <!-- feature end -->
 
     <!-- tab product start -->
-    <div class="tab-product pt-40 pb-40">
-        <div class="container">
-            <div class="product__nav-wrap ul_li_between mb-20">
-                <h2 class="section-heading"><span>Hot <span>New Arrival</span> You May Like</span></h2>
-                <ul class="product__nav rd-tab-nav nav nav-tabs" id="vd-myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="vd-tab-01" data-bs-toggle="tab" data-bs-target="#vd-tab1" type="button" role="tab" aria-controls="vd-tab1" aria-selected="true">Recent</button>
-                    </li>
+  <div class="tab-product pt-40 pb-40">
+    <div class="container">
+        <div class="product__nav-wrap ul_li_between mb-20">
+            <h2 class="section-heading">
+                <span>Hot <span>New Arrival</span> You May Like</span>
+            </h2>
+            <ul class="product__nav rd-tab-nav nav nav-tabs" id="vd-myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="vd-tab-01" data-bs-toggle="tab" data-bs-target="#vd-tab1"
+                        type="button" role="tab" aria-controls="vd-tab1" aria-selected="true">
+                        Recent
+                    </button>
+                </li>
+            </ul>
+        </div>
 
-                </ul>
-            </div>
-            <div class="vd-products">
-                <div class="tab-content tab_has_slider" id="vd-myTabContent">
-                    <div class="tab-pane fade show active" id="vd-tab4" role="tabpanel" aria-labelledby="vd-tab-04">
-
+        <div class="vd-products">
+            <div class="tab-content tab_has_slider" id="vd-myTabContent">
+                <div class="tab-pane fade show active" id="vd-tab1" role="tabpanel" aria-labelledby="vd-tab-01">
+                    <div class="row">
                         @foreach ($products as $item)
-
-                        <div class="tab-product__slide tx-arrow">
-                            <div class="tab-product__item tx-product text-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                            <div class="tab-product__item tx-product text-center position-relative">
                                 <div class="thumb">
-                                    <form id="checkout-form">
-                                        <input type="hidden" id="total_price" value="{{ $item->product_price }}">
-                                        <button type="submit" id="pay-button"> Bayar </button>
-                                    {{-- <a href="shop-single.html"><img src="/storage/product_images/{{ $item->product_images }}" alt=""></a> --}}
+                                    <a href="shop-single.html">
+                                        <img src="/storage/product_images/{{ $item->product_images }}" alt="{{ $item->product_name }}"
+                                            style="max-height: 200px; object-fit: cover; width: 100%;">
+                                    </a>
                                 </div>
-                                <div class="content">
-
-                                    <h3 class="title"><a href="shop-single.html">{{ $item->product_name }}</a></h3>
-                                    <span class="price">Rp. {{ $item->product_price }}</span>
+                                <div class="content mt-3">
+                                    <h3 class="title">
+                                        <a href="shop-single.html">{{ $item->product_name }}</a>
+                                    </h3>
+                                    <span class="price">Rp. {{ number_format($item->product_price, 0, ',', '.') }}</span>
                                 </div>
-                                <ul class="product__action">
-                                    <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
-                                    <li><a href="#!"><i class="far fa-shopping-basket"></i></a></li>
-                                    <li><a href="#!"><i class="far fa-heart"></i></a></li>
+                                <ul class="product__action d-flex justify-content-center mt-2">
+                                    <li class="mx-2"><a href="#!" title="View"><i class="far fa-compress-alt"></i></a></li>
+                                    <li class="mx-2"><a href="#!" title="Add to Cart"><i class="far fa-shopping-basket"></i></a></li>
+                                    <li class="mx-2"><a href="#!" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
-                                <span class="badge-skew">New</span>
+                                <span class="badge-skew position-absolute top-0 start-0 bg-danger text-white px-2 py-1">
+                                    New
+                                </span>
+
+                                {{-- Checkout form --}}
+                                <form id="checkout-form-{{ $item->id }}" method="POST" action="{{ route('checkout') }}">
+                                    @csrf
+                                    <input type="hidden" name="product_id" value="{{ $item->id }}">
+                                    <input type="hidden" name="total_price" value="{{ $item->product_price }}">
+                                    <button type="submit" class="btn btn-sm btn-primary mt-2">Bayar</button>
+                                </form>
                             </div>
                         </div>
                         @endforeach
-
-                    </div>
-
+                    </div> <!-- /.row -->
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- tab product end -->
 
     <!-- rd slide product start -->
