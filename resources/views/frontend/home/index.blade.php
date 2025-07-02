@@ -901,12 +901,12 @@
                                             <a href="shop-single.html"><img src="assets/img/product/img_26.png" alt=""></a>
                                         </div>
                                         <div class="product__content">
-                                            <span class="product__available">Available: <span>334</span></span>
+                                            <span class="product__available">Available:: <span>334</span></span>
                                             <div class="product__progress progress">
                                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
-                                            <h2 class="product__title"><a href="shop-single.html">Sceptre 24″ Professional Thin 75Hz 1080p LED</a></h2>
-                                            <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                            <h2 class="product__title"><a href="shop-single.html">Sceptre  Professional Thin 75Hz 1080p LED</a></h2>
+                                            <h4 class="product__price"><span class="new">$30.52</span><span class="old">$66.52</span></h4>
                                         </div>
                                         <ul class="product__action">
                                             <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
