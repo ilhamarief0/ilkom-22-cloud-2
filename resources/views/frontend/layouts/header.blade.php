@@ -180,104 +180,31 @@
 </form>
 
 
-            <!-- Pilihan Bahasa dan Mata Uang -->
-<div class="header__lang ul_li">
-
-    <!-- Pilihan Mata Uang -->
-    <div class="header__language mr-15">
-        <button class="lang-btn" onclick="toggleDropdown(this)" aria-haspopup="true" aria-expanded="false">
-            USD <i class="far fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <ul class="lang_sub_list">
-            <li><a href="#!" data-currency="USD">USD</a></li>
-            <li><a href="#!" data-currency="BDT">BDT</a></li>
-            <li><a href="#!" data-currency="EUR">EUR</a></li>
-        </ul>
-    </div>
-
-    <!-- Pilihan Bahasa -->
-    <div class="header__language">
-        <button class="lang-btn" onclick="toggleDropdown(this)" aria-haspopup="true" aria-expanded="false">
-            <img src="{{ asset('assets/img/icon/usd_flag.png') }}" alt="Bendera USD" width="20" height="13">
-            English <i class="far fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <ul class="lang_sub_list">
-            <li><a href="#!" data-lang="en">English</a></li>
-            <li><a href="#!" data-lang="ar">Arabic</a></li>
-            <li><a href="#!" data-lang="bn">Bangla</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- Script Toggle -->
-<script>
-    function toggleDropdown(button) {
-        const dropdown = button.nextElementSibling;
-        const isVisible = dropdown.style.display === 'block';
-        
-        // Tutup semua dropdown lain
-        document.querySelectorAll('.lang_sub_list').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.lang-btn').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
-
-        if (!isVisible) {
-            dropdown.style.display = 'block';
-            button.setAttribute('aria-expanded', 'true');
-        }
-    }
-
-    // Tutup dropdown jika klik di luar
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.header__language')) {
-            document.querySelectorAll('.lang_sub_list').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
-        }
-    });
-</script>
-
-<!-- Styling Tambahan -->
-<style>
-    .lang_sub_list {
-        display: none;
-        position: absolute;
-        background: #fff;
-        border: 1px solid #ddd;
-        margin-top: 5px;
-        z-index: 999;
-        padding: 8px 0;
-        list-style: none;
-        min-width: 120px;
-    }
-
-    .lang_sub_list li a {
-        display: block;
-        padding: 8px 16px;
-        color: #333;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .lang_sub_list li a:hover {
-        background-color: #f5f5f5;
-    }
-
-    .lang-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        position: relative;
-    }
-
-    .header__language {
-        position: relative;
-    }
-</style>
-
+            <!-- Pilihan bahasa dan mata uang -->
+            <div class="header__lang ul_li">
+                <div class="header__language mr-15">
+                    <ul>
+                        <li><a href="#!" class="lang-btn">USD <i class="far fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul class="lang_sub_list">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">BDT</a></li>
+                                <li><a href="#">EUR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__language">
+                    <ul>
+                        <li><a href="#!" class="lang-btn"><img src="assets/img/icon/usd_flag.png" alt="USD Flag">English <i class="far fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul class="lang_sub_list">
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Arabic</a></li>
+                                <li><a href="#">Bangla</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Ikon user, wishlist, dan keranjang -->
             <div class="header__icons ul_li">
