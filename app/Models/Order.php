@@ -9,7 +9,7 @@ class Order extends Model
     protected $fillable = [
         'order_id',// ID unik untuk pesanan
         'user_id',// ID user yang membuat pesanan
-        'total_price',
+        'total_price',// Total harga keseluruhan pesanan
         'status'
     ];
 }
