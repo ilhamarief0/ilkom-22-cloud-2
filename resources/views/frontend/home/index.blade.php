@@ -763,7 +763,7 @@
                         </div>
                         <div class="col-lg-4 mt-30">
                             <div class="rd-product__middle">
-                                <h2 class="section-heading"><span>5 Star Review</span></h2>
+                                <h2 class="section-heading"><span>Rating 5 bintang</span></h2>
                                 <div class="tab-content" id="m-myTabContent2">
                                     <div class="tab-pane fade show active" id="m-home2" role="tabpanel" aria-labelledby="m-home-tab2">
                                         <div class="img text-center">
