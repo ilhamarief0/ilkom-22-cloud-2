@@ -68,6 +68,67 @@
         }
 
     </style>
+    <style>
+    .product-cat__nav button {
+        border: none;
+        padding: 4px;
+        background: transparent;
+        transition: transform 0.2s ease, border 0.2s ease;
+        border-radius: 6px;
+    }
+    .product-cat__nav button.active,
+    .product-cat__nav button:hover {
+        transform: scale(1.05);
+        border: 2px solid #ddd;
+    }
+
+    .product-cat__img img {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+    }
+
+    .product-cat__img img:hover {
+        transform: scale(1.02);
+    }
+
+    .product-cat__item {
+        border: 1px solid #eee;
+        padding: 20px;
+        border-radius: 16px;
+        transition: box-shadow 0.3s ease;
+        background-color: #fff;
+    }
+
+    .product-cat__item:hover {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-cat__content h3.title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .product-cat__content ul li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+    .product-cat__content ul li a:hover {
+        color: #ff6600;
+    }
+
+    .product-cat__nav img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+</style>
+
     
 
     <!-- Baris paling atas: info toko dan sosial media -->
