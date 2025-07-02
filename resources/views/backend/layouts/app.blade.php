@@ -138,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="navi-text text-muted text-hover-primary">{{ auth()->user()->email }}</span>
 								</span>
 							</a>
-							<a href="#" id="logout-btn" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+							<a href="{{ route('logout') }}" id="logout-btn" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out </a>
 						</div>
 					</div>
 				</div>
