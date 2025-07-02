@@ -17,17 +17,25 @@
         <!-- Daftar item dalam keranjang -->
         <div class="cart_items_list">
 
-            <!-- Item pertama -->
-            <div class="cart_item">
-                <div class="item_image">
-                    <img src="assets/img/product/img_01.png" alt="image_not_found">
-                </div>
-                <div class="item_content">
-                    <h4 class="item_title">Rorem ipsum dolor sit amet.</h4>
-                    <span class="item_price">$19.00</span>
-                    <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                </div>
-            </div>
+           <!-- Item pertama -->
+        <div class="cart_item" style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd; align-items: center;">
+    <div class="item_image" style="flex-shrink: 0;">
+        <img src="assets/img/product/img_01.png" alt="image_not_found" style="width: 80px; height: auto; border-radius: 8px;">
+    </div>
+    <div class="item_content" style="flex-grow: 1;">
+        <h4 class="item_title" style="margin: 0 0 8px; font-size: 1.1rem;">Rorem ipsum dolor sit amet</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="item_price" style="font-weight: bold; color: #2c3e50;">$19.00</span>
+            <span class="item_quantity" style="color: #888;">Qty: 1</span>
+        </div>
+    </div>
+    <div class="remove_btn_wrapper" style="margin-left: auto;">
+        <button type="button" class="remove_btn" title="Hapus dari keranjang" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #e74c3c;">
+            <i class="fal fa-times"></i>
+        </button>
+    </div>
+    </div>
+
 
             <!-- Item kedua -->
             <div class="cart_item">
