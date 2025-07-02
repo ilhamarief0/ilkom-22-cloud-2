@@ -930,19 +930,19 @@
                                             <a href="shop-single.html"><img src="assets/img/product/img_15.png" alt=""></a>
                                         </div>
                                         <div class="product__content">
-                                            <span class="product__available">Available: <span>334</span></span>
+                                            <span class="product__available">Available= <span>334</span></span>
                                             <div class="product__progress progress">
                                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
-                                            <h2 class="product__title"><a href="shop-single.html">Chromebook Flip Laptop, 14″ Full HD</a></h2>
-                                            <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                            <h2 class="product__title"><a href="shop-single.html">Chromebook Flip Laptop Full HD</a></h2>
+                                            <h4 class="product__price"><span class="new">$440.52</span><span class="old">$28.52</span></h4>
                                         </div>
                                         <ul class="product__action">
                                             <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
                                             <li><a href="#!"><i class="far fa-shopping-basket"></i></a></li>
                                             <li><a href="#!"><i class="far fa-heart"></i></a></li>
                                         </ul>
-                                        <span class="badge-default">New</span>
+                                        <span class="badge-default">baru</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mt-30">
