@@ -356,7 +356,7 @@
                                             <span>(126) Review</span>
                                         </div>
                                         <h2 class="product__title"><a href="shop-single.html">CLB 510BT Wireless Headphones with Purebass</a></h2>
-                                        <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                        <h4 class="product__price"><span class="new">$65.44</span><span class="old">$45.56</span></h4>
                                     </div>
                                     <ul class="product__action">
                                         <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
