@@ -170,14 +170,40 @@
             </li>
 
             <!-- Menu Pages dengan submenu -->
-            <li class="dropdown">
-                <a href="#!">Pages</a>
+            <li class="dropdown" aria-haspopup="true">
+                <a href="javascript:void(0);" aria-expanded="false">
+                    <i class="far fa-file-alt mr-1" aria-hidden="true"></i> Pages 
+                    <i class="far fa-chevron-down ml-1" aria-hidden="true"></i>
+                </a>
                 <ul class="submenu">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="about.html">Account</a></li>
-                    <li><a href="404.html">404</a></li>
+                    <li>
+                        <a href="about.html">
+                            <i class="far fa-info-circle mr-1" aria-hidden="true"></i> About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account.html">
+                            <i class="far fa-user mr-1" aria-hidden="true"></i> Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="404.html">
+                            <i class="far fa-exclamation-triangle mr-1" aria-hidden="true"></i> 404 Not Found
+                        </a>
+                    </li>
+                    <li>
+                        <a href="faq.html">
+                            <i class="far fa-question-circle mr-1" aria-hidden="true"></i> FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="privacy-policy.html">
+                            <i class="far fa-shield-alt mr-1" aria-hidden="true"></i> Privacy Policy
+                        </a>
+                    </li>
                 </ul>
             </li>
+
 
             <!-- Menu kontak langsung -->
             <li><a href="contact.html">Contact</a></li>
