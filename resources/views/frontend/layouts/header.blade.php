@@ -232,24 +232,95 @@
         <div class="container">
             <div class="header__wrap ul_li_between">
 
-                <!-- Daftar kategori dengan ikon -->
-                <div class="header__cat ul_li">
-                    <div class="hamburger_menu">
-                        <a href="javascript:void(0);" class="active" aria-label="Kategori">
-                            <div class="icon bar">
-                                <span><i class="fal fa-bars" aria-hidden="true"></i></span>
-                            </div>
-                        </a>
-                    </div>
-                    <ul class="category ul_li">
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_01.svg" alt="Ikon Laptop"></span>Laptops & Computers</a></li>
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_02.svg" alt="Ikon CCTV"></span>CCTV & Camera</a></li>
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_03.svg" alt="Ikon Home Equipment"></span>Home Equipment</a></li>
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_04.svg" alt="Ikon TV"></span>Tv & Audios</a></li>
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_05.svg" alt="Ikon Printer"></span>Printers & Ink</a></li>
-                        <li><a href="#!"><span><img src="assets/img/icon/hc_06.svg" alt="Ikon Gaming"></span>Gaming & Fun</a></li>
-                    </ul>
-                </div>
+                <!-- Daftar Kategori Produk -->
+<nav class="header__cat ul_li" aria-label="Kategori Produk">
+    <!-- Tombol Hamburger -->
+    <button class="hamburger_menu active" aria-label="Tampilkan Kategori" aria-expanded="false" onclick="toggleCategoryMenu(this)">
+        <i class="fal fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <!-- Menu Kategori -->
+    <ul class="category ul_li" id="categoryMenu">
+        <li>
+            <a href="#!" aria-label="Laptops & Computers">
+                <img src="{{ asset('assets/img/icon/hc_01.svg') }}" alt="Ikon Laptop" loading="lazy">
+                Laptops & Computers
+            </a>
+        </li>
+        <li>
+            <a href="#!" aria-label="CCTV & Camera">
+                <img src="{{ asset('assets/img/icon/hc_02.svg') }}" alt="Ikon CCTV" loading="lazy">
+                CCTV & Camera
+            </a>
+        </li>
+        <li>
+            <a href="#!" aria-label="Home Equipment">
+                <img src="{{ asset('assets/img/icon/hc_03.svg') }}" alt="Ikon Peralatan Rumah" loading="lazy">
+                Home Equipment
+            </a>
+        </li>
+        <li>
+            <a href="#!" aria-label="TV & Audios">
+                <img src="{{ asset('assets/img/icon/hc_04.svg') }}" alt="Ikon TV dan Audio" loading="lazy">
+                TV & Audios
+            </a>
+        </li>
+        <li>
+            <a href="#!" aria-label="Printers & Ink">
+                <img src="{{ asset('assets/img/icon/hc_05.svg') }}" alt="Ikon Printer dan Tinta" loading="lazy">
+                Printers & Ink
+            </a>
+        </li>
+        <li>
+            <a href="#!" aria-label="Gaming & Fun">
+                <img src="{{ asset('assets/img/icon/hc_06.svg') }}" alt="Ikon Gaming dan Hiburan" loading="lazy">
+                Gaming & Fun
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Optional: Toggle Script -->
+<script>
+    function toggleCategoryMenu(button) {
+        const menu = document.getElementById('categoryMenu');
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('show');
+    }
+</script>
+
+<!-- Optional CSS -->
+<style>
+    .category {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    .category.show {
+        display: flex;
+    }
+    .category li {
+        list-style: none;
+    }
+    .category a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+        transition: color 0.2s ease;
+    }
+    .category a:hover {
+        color: #007bff;
+    }
+    .category img {
+        width: 24px;
+        height: 24px;
+    }
+</style>
 
                 <!-- Tombol login atau daftar -->
                 <div class="login-sign-btn">
