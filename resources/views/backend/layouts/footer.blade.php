@@ -21,6 +21,9 @@
             <a href="https://instagram.com" class="text-muted"><i class="fab fa-instagram"></i></a>
         </div>
 
+        <a href="/privacy-policy" class="nav-link px-3">Privacy Policy</a>
+        <a href="/terms-conditions" class="nav-link px-3">Terms & Conditions</a>
+        <a href="/contact-us" class="nav-link px-3">Contact Us</a>
     </div>
 </footer>
 
