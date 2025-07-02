@@ -3,138 +3,190 @@
 
     <!-- Tombol untuk menutup menu slide di tampilan mobile -->
     <div class="close-mobile-menu">
-        <a href="javascript:void(0);" onclick="closeSlideBar()"><i class="fal fa-times"></i></a>
+        <a href="javascript:void(0);"><i class="fal fa-times"></i></a>
     </div>
 
-    <!-- sidebar-info start -->
+    <!-- sidebar-info start (menampilkan keranjang belanja) -->
     <div class="cart_sidebar">
-        <button type="button" class="cart_close_btn" onclick="closeSlideBar()"><i class="fal fa-times"></i></button>
+        <!-- Tombol untuk menutup sidebar keranjang -->
+        <button type="button" class="cart_close_btn"><i class="fal fa-times"></i></button>
 
-        <h2 class="heading_title text-uppercase">
-            Cart Items - <span>{{ count($cartItems) }}</span>
-        </h2>
+        <!-- Judul dan jumlah item di keranjang -->
+        <h2 class="heading_title text-uppercase">Cart Items - <span>4</span></h2>
 
+        <!-- Daftar item dalam keranjang -->
         <div class="cart_items_list">
-            @forelse($cartItems as $item)
-            <div class="cart_item d-flex gap-3 p-3 border-bottom align-items-center">
-                <div class="item_image">
-                    <img src="{{ asset($item->product->image ?? 'assets/img/product/default.png') }}" alt="image" class="rounded" style="width: 80px;">
-                </div>
-                <div class="item_content flex-grow-1">
-                    <h4 class="item_title mb-2">{{ $item->product->name }}</h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="item_price font-weight-bold text-dark">${{ number_format($item->product->price, 2) }}</span>
-                        <span class="item_quantity text-muted">Qty: {{ $item->quantity }}</span>
-                    </div>
-                </div>
-                <form action="{{ route('cart.remove', $item->id) }}" method="POST" class="ml-auto">
-                    @csrf @method('DELETE')
-                    <button class="remove_btn text-danger bg-transparent border-0" aria-label="Hapus dari keranjang">
-                        <i class="fal fa-times"></i>
-                    </button>
-                </form>
+
+           <!-- Item pertama -->
+        <div class="cart_item" style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd; align-items: center;">
+    <div class="item_image" style="flex-shrink: 0;">
+        <img src="assets/img/product/img_01.png" alt="image_not_found" style="width: 80px; height: auto; border-radius: 8px;">
+    </div>
+    <div class="item_content" style="flex-grow: 1;">
+        <h4 class="item_title" style="margin: 0 0 8px; font-size: 1.1rem;">Rorem ipsum dolor sit amet</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="item_price" style="font-weight: bold; color: #2c3e50;">$19.00</span>
+            <span class="item_quantity" style="color: #888;">Qty: 1</span>
+        </div>
+    </div>
+    <div class="remove_btn_wrapper" style="margin-left: auto;">
+        <button type="button" class="remove_btn" title="Hapus dari keranjang" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #e74c3c;">
+            <i class="fal fa-times"></i>
+        </button>
+    </div>
+    </div>
+
+
+                <!-- Item kedua -->
+        <div class="cart_item" style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd; align-items: center;">
+            <div class="item_image" style="flex-shrink: 0;">
+                <img src="assets/img/product/img_02.png" alt="image_not_found" style="width: 80px; height: auto; border-radius: 8px;">
             </div>
-            @empty
-            <p class="text-center text-muted mt-3">Keranjang kosong.</p>
-            @endforelse
+            <div class="item_content" style="flex-grow: 1;">
+                <h4 class="item_title" style="margin: 0 0 8px; font-size: 1.1rem;">Rorem ipsum dolor sit amet</h4>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="item_price" style="font-weight: bold; color: #2c3e50;">$22.00</span>
+                    <span class="item_quantity" style="color: #888;">Qty: 1</span>
+                </div>
+            </div>
+            <div class="remove_btn_wrapper" style="margin-left: auto;">
+                <button type="button" class="remove_btn" title="Hapus dari keranjang" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #e74c3c;">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
         </div>
 
-        <div class="total_price text-uppercase d-flex justify-content-between p-3 border-top">
+            <!-- Item ketiga -->
+        <div class="cart_item" style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd; align-items: center;">
+            <div class="item_image" style="flex-shrink: 0;">
+                <img src="assets/img/product/img_03.png" alt="image_not_found" style="width: 80px; height: auto; border-radius: 8px;">
+            </div>
+            <div class="item_content" style="flex-grow: 1;">
+                <h4 class="item_title" style="margin: 0 0 8px; font-size: 1.1rem;">Rorem ipsum dolor sit amet</h4>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="item_price" style="font-weight: bold; color: #2c3e50;">$43.00</span>
+                    <span class="item_quantity" style="color: #888;">Qty: 1</span>
+                </div>
+            </div>
+            <div class="remove_btn_wrapper" style="margin-left: auto;">
+                <button type="button" class="remove_btn" title="Hapus dari keranjang" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #e74c3c;">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+
+            <!-- Item keempat -->
+        <div class="cart_item" style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd; align-items: center;">
+            <div class="item_image" style="flex-shrink: 0;">
+                <img src="assets/img/product/img_04.png" alt="image_not_found" style="width: 80px; height: auto; border-radius: 8px;">
+            </div>
+            <div class="item_content" style="flex-grow: 1;">
+                <h4 class="item_title" style="margin: 0 0 8px; font-size: 1.1rem;">Rorem ipsum dolor sit amet</h4>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="item_price" style="font-weight: bold; color: #2c3e50;">$14.00</span>
+                    <span class="item_quantity" style="color: #888;">Qty: 1</span>
+                </div>
+            </div>
+            <div class="remove_btn_wrapper" style="margin-left: auto;">
+                <button type="button" class="remove_btn" title="Hapus dari keranjang" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #e74c3c;">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+
+        </div>
+
+        <!-- Total harga semua item -->
+        <div class="total_price text-uppercase">
             <span>Sub Total:</span>
-            <span>${{ number_format($cartItems->sum(fn($item) => $item->product->price * $item->quantity), 2) }}</span>
+            <span>$87.00</span>
         </div>
 
-        <ul class="btns_group d-flex gap-3 justify-content-center py-3 list-unstyled">
-            <li><a href="{{ route('cart.index') }}" class="thm-btn bg-primary text-white px-4 py-2 rounded">View Cart</a></li>
-            <li><a href="{{ route('checkout.index') }}" class="thm-btn bg-dark text-white px-4 py-2 rounded">Checkout</a></li>
+        <!-- Tombol navigasi menuju halaman cart dan checkout -->
+        <!-- Tombol navigasi menuju halaman cart dan checkout -->
+        <ul class="btns_group ul_li" style="display: flex; gap: 12px; justify-content: center; padding: 16px 0; list-style: none;">
+            <li>
+                <a href="cart.html" class="thm-btn" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; transition: 0.3s;">
+                    View Cart
+                </a>
+            </li>
+            <li>
+                <a href="checkout.html" class="thm-btn thm-btn__black" style="display: inline-block; padding: 10px 20px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none; font-weight: 500; transition: 0.3s;">
+                    Checkout
+                </a>
+            </li>
         </ul>
+
     </div>
     <!-- sidebar-info end -->
 
-    <!-- side-mobile-menu start -->
+    <!-- side-mobile-menu start (menu navigasi untuk tampilan mobile) -->
     <nav class="side-mobile-menu">
+
+        <!-- Kolom pencarian di menu mobile -->
         <div class="header-mobile-search">
-            <form role="search" method="GET" action="{{ route('search') }}">
-                <input type="text" name="query" placeholder="Search Keywords" />
+            <form role="search" method="get" action="#">
+                <input type="text" placeholder="Search Keywords">
                 <button type="submit"><i class="ti-search"></i></button>
             </form>
         </div>
 
+        <!-- Navigasi menu utama -->
         <ul id="mobile-menu-active">
-            <li class="dropdown"><a href="{{ route('home') }}">Home</a>
+            <!-- Menu Home dengan submenu -->
+            <li class="dropdown"><a href="index.html">Home</a>
                 <ul class="sub-menu">
-                    <li><a href="{{ route('home') }}">Home One</a></li>
-                    <li><a href="{{ route('home.alt', 2) }}">Home Two</a></li>
+                    <li><a href="index.html">Home One</a></li>
+                    <li><a href="home-2.html">Home Two</a></li>
+                    <li><a href="home-3.html">Home Three</a></li>
                 </ul>
             </li>
-            <li class="dropdown"><a href="{{ route('shop.index') }}">Shop</a>
+
+            <!-- Menu Shop dengan submenu -->
+            <li class="dropdown">
+                <a href="#">Shop</a>
                 <ul class="sub-menu">
-                    <li><a href="{{ route('shop.index') }}">Shop Default</a></li>
-                    <li><a href="{{ route('cart.index') }}">Cart</a></li>
-                    <li><a href="{{ route('checkout.index') }}">Checkout</a></li>
+                    <li><a href="shop.html">Shop Default</a></li>
+                    <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                    <li><a href="shop-single.html">Shop Single</a></li>
+                    <li><a href="cart.html">Shop Cart</a></li>
+                    <li><a href="checkout.html">Shop Checkout</a></li>
+                    <li><a href="account.html">Account</a></li>
                 </ul>
             </li>
-            <li><a href="{{ route('contact') }}">Contact</a></li>
+
+            <!-- Menu aksesori langsung -->
+            <li><a href="shop.html">Accesories</a></li>
+
+            <!-- Menu Blog dengan submenu -->
+            <li class="dropdown">
+                <a href="#!">Blog</a>
+                <ul class="sub-menu">
+                    <li><a href="news.html">Blog</a></li>
+                    <li><a href="news-single.html">Blog Details</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu Pages dengan submenu -->
+            <li class="dropdown">
+                <a href="#!">Pages</a>
+                <ul class="submenu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Account</a></li>
+                    <li><a href="404.html">404</a></li>
+                </ul>
+            </li>
+
+            <!-- Menu kontak langsung -->
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <!-- side-mobile-menu end -->
 
 </aside>
 
-<!-- Overlay -->
-<div class="body-overlay" onclick="closeSlideBar()"></div>
-
-<!-- CSS Responsif -->
-<style>
-    .slide-bar {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 80%;
-        height: 100%;
-        background: #fff;
-        transition: 0.3s;
-        z-index: 1000;
-        overflow-y: auto;
-    }
-
-    .slide-bar.show {
-        right: 0;
-    }
-
-    .body-overlay {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        top: 0;
-        left: 0;
-        z-index: 999;
-    }
-
-    .body-overlay.active {
-        display: block;
-    }
-
-    @media (min-width: 992px) {
-        .side-mobile-menu {
-            display: none;
-        }
-    }
-</style>
-
-<!-- JS -->
-@push('scripts')
-<script>
-    function openSlideBar() {
-        document.querySelector('.slide-bar').classList.add('show');
-        document.querySelector('.body-overlay').classList.add('active');
-    }
-
-    function closeSlideBar() {
-        document.querySelector('.slide-bar').classList.remove('show');
-        document.querySelector('.body-overlay').classList.remove('active');
-    }
-</script>
-@endpush
+<!-- Overlay gelap di belakang slide bar -->
+<div class="body-overlay"></div>
+<!-- slide-bar end -->
