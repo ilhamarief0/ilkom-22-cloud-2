@@ -40,6 +40,6 @@ Route::middleware('auth')->group(function(){
 });
 
 Route::middleware(['auth'])->group(function () {
-    // Rute untuk menampilkan form konfirmasi hapus akun (opsional, tapi disarankan)
     Route::get('/profile/delete', [ProfileController::class, 'deleteAccountForm'])->name('profile.delete.form');
+    Route::delete('/profile', [ProfileController::class, 'destroyAccount'])->name('profile.destroy');
 });
