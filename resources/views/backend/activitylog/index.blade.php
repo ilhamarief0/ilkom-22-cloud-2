@@ -1,4 +1,5 @@
 @extends('backend.layouts.app')
+
 @section('content')
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -15,13 +16,14 @@
                     </div>
                 </div>
                 <!--end::Header-->
+
                 <!--begin::Body-->
                 <div class="card-body">
-                    <!--begin: Datatable-->
-                    <table class="table table-bordered" id="kt_datatable">
-                        <thead>
+                    <!--begin::Datatable-->
+                    <table class="table table-bordered table-hover" id="kt_datatable">
+                        <thead class="thead-light">
                             <tr>
-                                <th>No</th>
+                                <th style="width: 5%;">No</th>
                                 <th>User</th>
                                 <th>Log Description</th>
                                 <th>Properties</th>
@@ -30,7 +32,7 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <!--end: Datatable-->
+                    <!--end::Datatable-->
                 </div>
                 <!--end::Body-->
             </div>
@@ -45,38 +47,47 @@
 
 @push('scripts')
 <script>
-$(document).ready(function() {
-    if (!$.fn.DataTable) {
-        console.error("Yajra DataTables tidak ditemukan!");
-        return;
-    }
+    $(document).ready(function () {
+        if (typeof $.fn.DataTable === "undefined") {
+            console.error("Yajra DataTables plugin is not loaded.");
+            return;
+        }
 
-    $('#kt_datatable').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: '{{ route("backend.activitylogs.dataTable") }}',
-        language: {
-            emptyTable: "No Data Found",
-            processing: "Loading..."
-        },
-        columns: [
-            { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
-            { data: 'user', name: 'user' },
-            { data: 'description', name: 'description' },
-            {
-                data: 'properties',
-                name: 'properties',
-                orderable: false,
-                searchable: false,
-                defaultContent: '<span class="text-muted">No Details</span>',
-                render: function(data) {
-                    return data ? '<pre>' + data + '</pre>' : '<span class="text-muted">No Details</span>';
+        $('#kt_datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: {
+                url: '{{ route("backend.activitylogs.dataTable") }}',
+                type: 'GET',
+                error: function(xhr) {
+                    console.error("Failed to load data:", xhr.responseText);
+                    alert("Terjadi kesalahan saat memuat data log.");
                 }
             },
-            { data: 'created_at', name: 'created_at' }
-        ],
-        order: [[4, 'desc']]
+            language: {
+                emptyTable: "Tidak ada data ditemukan",
+                processing: "Memuat data..."
+            },
+            columns: [
+                { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
+                { data: 'user', name: 'user' },
+                { data: 'description', name: 'description' },
+                {
+                    data: 'properties',
+                    name: 'properties',
+                    orderable: false,
+                    searchable: false,
+                    render: function (data) {
+                        if (data && typeof data === 'string' && data.trim() !== '') {
+                            return `<pre class="mb-0">${data}</pre>`;
+                        }
+                        return '<span class="text-muted">No Details</span>';
+                    }
+                },
+                { data: 'created_at', name: 'created_at' }
+            ],
+            order: [[4, 'desc']]
+        });
     });
-});
 </script>
 @endpush
