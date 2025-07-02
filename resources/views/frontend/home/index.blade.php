@@ -304,7 +304,7 @@
                                             <span>(126) Review</span>
                                         </div>
                                         <h2 class="product__title"><a href="shop-single.html">Sceptre 24″ Professional Thin 75Hz 1080p LED Monitor</a></h2>
-                                        <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                        <h4 class="product__price"><span class="new">$30.55</span><span class="old">$29.54</span></h4>
                                     </div>
                                     <ul class="product__action">
                                         <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
