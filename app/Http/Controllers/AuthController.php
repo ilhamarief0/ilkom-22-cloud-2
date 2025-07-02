@@ -127,5 +127,9 @@ class AuthController extends Controller
         ]);
          // 2. Ambil User yang sedang login
         $user = $request->user(); // Atau Auth::user();
+        
+        // 3. Logout User (opsional, tapi disarankan sebelum menghapus)
+        // Ini memastikan sesi pengguna berakhir setelah akun dihapus.
+        Auth::logout();
     }
 }
