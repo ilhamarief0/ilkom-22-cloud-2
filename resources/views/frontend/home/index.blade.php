@@ -501,7 +501,7 @@
                                                 <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <h2 class="product__title"><a href="shop-single.html">Acer SB220Q bi 21.5 Inches Full HD </a></h2>
-                                            <h4 class="product__price"><span class="new">$30.52</span><span class="old">$28.52</span></h4>
+                                            <h4 class="product__price"><span class="new">$55.52</span><span class="old">$28.52</span></h4>
                                         </div>
                                         <ul class="product__action">
                                             <li><a href="#!"><i class="far fa-compress-alt"></i></a></li>
