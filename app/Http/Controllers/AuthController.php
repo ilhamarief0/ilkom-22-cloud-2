@@ -139,5 +139,9 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
+        // 6. Redirect atau Beri Pesan Sukses
+        // Setelah akun terhapus, redirect ke halaman utama atau halaman login
+        // dengan pesan sukses.
+        return redirect()->route('login')->with('status', 'Akun Anda berhasil dihapus.');
     }
 }
