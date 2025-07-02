@@ -125,5 +125,7 @@ class AuthController extends Controller
         ], [
             'password.current_password' => 'Password yang Anda masukkan tidak sesuai dengan password akun Anda.',
         ]);
+         // 2. Ambil User yang sedang login
+        $user = $request->user(); // Atau Auth::user();
     }
 }
