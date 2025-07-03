@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\UsersController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Backend\ProductController;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
@@ -45,3 +46,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/delete', [ProfileController::class, 'deleteAccountForm'])->name('profile.delete.form');
     Route::delete('/profile', [ProfileController::class, 'destroyAccount'])->name('profile.destroy');
 });
+
+Route::middleware(['auth'])
+    ->prefix('admin')
+    ->name('products.')
+    ->group(function () {
+        Route::resource('products', ProductController::class)->except('show');
+    });
