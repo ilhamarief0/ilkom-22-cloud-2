@@ -51,5 +51,7 @@ Route::middleware(['auth'])
     ->prefix('admin')
     ->name('products.')
     ->group(function () {
+        Route::get('products/export', [ProductController::class, 'export'])
+             ->name('export');
         Route::resource('products', ProductController::class)->except('show');
     });

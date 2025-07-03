@@ -7,6 +7,8 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use App\Exports\ProductsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProductController extends Controller
 {
@@ -32,7 +34,7 @@ class ProductController extends Controller
 
     return view('backend.products.index', compact('products', 'categories'));
     }
-    
+
     public function create()
     {
         return view('backend.products.create');
@@ -94,6 +96,13 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')
                          ->with('status','Produk berhasil dihapus.');
+    }
+    public function export(Request $request)
+    {
+    return Excel::download(
+        new ProductsExport($request->search, $request->category),
+        'daftar_produk.xlsx'
+    );
     }
 }
 

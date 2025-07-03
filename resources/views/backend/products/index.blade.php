@@ -23,6 +23,11 @@
     <a href="{{ route('products.index') }}" class="text-gray-600 underline ml-2">Reset</a>
 </form>
 
+<a href="{{ route('products.export', request()->query()) }}"
+   class="bg-green-600 text-white px-4 py-2 rounded ml-auto">
+   Export Excel
+</a>
+
 <div class="container py-4">
     <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Daftar Produk</h2>
