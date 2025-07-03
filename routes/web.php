@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function(){
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/delete', [ProfileController::class, 'deleteAccountForm'])->name('profile.delete.form');
     Route::delete('/profile', [ProfileController::class, 'destroyAccount'])->name('profile.destroy');
 });
