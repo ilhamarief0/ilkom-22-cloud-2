@@ -10,12 +10,29 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::latest()->paginate(10);
-        return view('backend.products.index', compact('products'));
+    $query = Product::with('category');
+
+    // Pencarian by nama atau deskripsi
+    if ($search = $request->input('search')) {
+        $query->where(function($q) use ($search) {
+            $q->where('product_name', 'like', "%{$search}%")
+              ->orWhere('product_desc', 'like', "%{$search}%");
+        });
     }
 
+    // Filter kategori
+    if ($categoryId = $request->input('category')) {
+        $query->where('product_category_id', $categoryId);
+    }
+
+    $products = $query->latest()->paginate(10)->withQueryString(); // agar pagination bawa parameter
+    $categories = \App\Models\Product_category::all();
+
+    return view('backend.products.index', compact('products', 'categories'));
+    }
+    
     public function create()
     {
         return view('backend.products.create');

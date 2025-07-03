@@ -1,6 +1,28 @@
 @extends('backend.layouts.app')
 
 @section('content')
+<!-- Filter & Search -->
+<form method="GET" action="{{ route('products.index') }}" class="mb-4 flex flex-wrap gap-2 items-center">
+    <input type="text" name="search" placeholder="Cari produk..."
+           value="{{ request('search') }}"
+           class="border p-2 rounded w-64">
+
+    <select name="category" class="border p-2 rounded">
+        <option value="">-- Semua Kategori --</option>
+        @foreach($categories as $category)
+            <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
+                {{ $category->name }}
+            </option>
+        @endforeach
+    </select>
+
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
+        Filter
+    </button>
+
+    <a href="{{ route('products.index') }}" class="text-gray-600 underline ml-2">Reset</a>
+</form>
+
 <div class="container py-4">
     <div class="flex justify-between items-center mb-4">
         <h2 class="text-xl font-semibold">Daftar Produk</h2>
