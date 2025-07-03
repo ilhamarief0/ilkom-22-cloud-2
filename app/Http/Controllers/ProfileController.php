@@ -12,4 +12,8 @@ class ProfileController extends Controller
         $user = Auth::user();
         return view('frontend.profile.show', compact('user'));
     }
+    public function deleteAccountForm()
+    {
+    return view('frontend.profile.delete');
+    }
 }
